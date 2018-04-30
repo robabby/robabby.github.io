@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     url: 'https://lumen.netlify.com',
-    title: 'Blog by John Doe',
-    subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+    title: 'Blog by Rob Abby',
+    subtitle: 'A delicate harmony of discord',
     copyright: '© All rights reserved.',
     disqusShortname: '',
     menu: [
@@ -20,11 +20,11 @@ module.exports = {
       }
     ],
     author: {
-      name: 'John Doe',
-      email: '#',
+      name: 'Rob Abby',
+      email: 'hello@robabby.com',
       telegram: '#',
-      twitter: '#',
-      github: '#',
+      twitter: '@robabby83',
+      github: 'https://github.com/robabby',
       rss: '#',
       vk: '#'
     }
