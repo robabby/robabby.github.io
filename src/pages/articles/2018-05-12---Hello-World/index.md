@@ -6,7 +6,6 @@ draft: false
 path: "/posts/hello-world/"
 category: "Miscellaneous"
 tags:
-  - "About Me"
   - "Health"
   - "Books"
   - "Travel"
