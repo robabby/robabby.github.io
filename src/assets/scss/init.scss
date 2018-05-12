@@ -4,3 +4,10 @@
 @import "mixins";
 @import "base";
 @import "pages";
+@import "particles";
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
