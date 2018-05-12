@@ -20,7 +20,7 @@ Back in those days, MySpace Music was the revolutionary new way to get your musi
 
 Around 2010 I caught a break and was picked up by [Creative Circle](https://creativecircle.com/), a creative staffing agency.  They helped me land my first contract gig at The University of Chicago Booth School of Business, and the rest is history.  
 
-## Back to the future
+### Back to the future
 
 Fast forward to today, and I am coming off of a 5 year stint working as a Senior User Experience & Product Developer for [The SAVO Group](http://savogroup.com/).  SAVO was recently acquired by [Seismic](https://seismic.com/) which ended many peoples tenure there, myself included.  Over my time at SAVO the company was continually transforming, and each chapter taught me an incredible deal about the the world of software development.  Sometime soon I will write a post detailing my experience at SAVO and reflect on my experiences.
 
