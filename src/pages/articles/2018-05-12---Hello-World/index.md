@@ -1,0 +1,82 @@
+---
+title: "Hello World"
+date: "2018-05-12T09:41:32.169Z"
+layout: post
+draft: false
+path: "/posts/hello-world/"
+category: "Miscellaneous"
+tags:
+  - "About Me"
+  - "Health"
+  - "Books"
+  - "Travel"
+  - "Tutorial"
+  - "Personal Development"
+  - "Health"
+  - "Diet"
+  - "Yoga"
+  - "Nootropics"
+  - "Neurofeedback"
+  - "Video Games"
+  - "Entrepreneur"
+description: "Welcome to my shiny new website! Allow me to introduce myself, and set the intent for this site and how I will be using it over the coming months."
+---
+
+Hello interwebs! Whoever you are that is currently here reading this post, you're awesome!  Thank you for taking the time to check me out.  If you haven't already done so, go ahead and [read up on me](/about/) and get to know who I am. Please don't hesitate to connect with me and share your deepest darkest fears and secrets.
+
+As the title suggests, this is the first post on my cool new website built using the fantastic [Gatsby.js](https://www.gatsbyjs.org/).  Gatsby calls itself a blazing-fast static site generator built for [React](https://reactjs.org/).  It is is a ton of fun to use, and I highly recommend people to check it out.  Gatsby has a ton of awesome [starters](https://www.gatsbyjs.org/docs/gatsby-starters/) to get your site off the ground quickly, and this site was built using the [Lumen Starter](https://github.com/alxshelepenok/gatsby-starter-lumen).
+
+I have a broad amount of passions and interests, so as this site matures here are the things you can come to expect from me:
+
++ Posts about life, and the existential conundrums I find myself in.
++ The experiences I have traveling.
++ As an avid reader, I want to start writing book reports on the books that I read.  To both share the knowledge I find as valuable, and to help cement the content in my brain.
++ Thoughts and reflections on the tech industry
++ Website & Application Development Tutorials along with new learnings and challenges I overcome developing applications and websites.
++ Thoughts and concepts cover personal development, and the self-discover process.
++ Things that support a healthy lifestyle including exercise, diet, yoga, neurofeedback & nootropics.
++ I am a passionate gamer, so expect thoughts and impressions on video games, the state of game industry, eSports, and Destiny (Bungie pls).
++ As someone embracing their entrepreneurial spirit, I will be sharing experiences and reflections on starting and growing my own business.
+
+Clearly I am just getting started and we have a lot of ground to cover, so please stay tuned and check back frequently to stay on top of new content as it is released. A journey of a thousand miles begins with a single step, so consider this step number one.  I hope you will enjoy this journey with me!
+
+![Let's go exploring!](./lets-go-exploring.jpg)
+
+<!-- **Pellentesque habitant morbi tristique** senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. *Aenean ultricies mi vitae est.* Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.
+
+Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui.  [Donec non enim](#) in turpis pulvinar facilisis.
+
+![Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus](./1.jpg)
+
+## Header Level 2
+
++ Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
++ Aliquam tincidunt mauris eu risus.
+
+Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat.
+
+<figure>
+	<blockquote>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
+		<footer>
+			<cite>— Aliquam tincidunt mauris eu risus.</cite>
+		</footer>
+	</blockquote>
+</figure>
+
+### Header Level 3
+
++ Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
++ Aliquam tincidunt mauris eu risus.
+
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.
+
+```css
+#header h1 a {
+  display: block;
+  width: 300px;
+  height: 80px;
+}
+```
+
+Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus. -->
