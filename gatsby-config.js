@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     url: 'https://lumen.netlify.com',
     title: 'Rob Abby',
-    subtitle: 'Frontend, UX & Product Professional',
+    subtitle: 'UI/UX & Product Professional',
     copyright: '© All rights reserved.',
     disqusShortname: '',
     menu: [
