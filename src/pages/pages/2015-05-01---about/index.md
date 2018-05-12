@@ -4,10 +4,12 @@ layout: page
 path: "/about"
 ---
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
+Hey there!  My name is Rob, and I am a design-minded frontend developer focused on collaborating with Product, User Experience, and development teams.  I have a passion for building high-functioning, cross-disciplinary teams that focus on a user-centered discovery process where asking creative questions and challenging the status quo is encouraged.
 
-![Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.](./1.jpg)
+![An example of a high-functioning team in action.](./anchorman.gif)
 
-*Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.*
+*An example of a high-functioning team in action.*
 
-Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus
+I acknowledge that not all problems can be solved with code, and nothing is more fulfilling than finding a group of people who can infuse the passion for their craft with a mutual purpose to grow and have an impact together.  I no longer have much patience for *ninjas* and *rockstars*, and instead prefer surrounding myself with people who are humble and driven.  Untapped potential excites me, and providing people with a platform to create and collaborate effectively in a supportive and encouraging environment is one of my favorite ways to contribute and nurture individual growth.
+
+When creating a team, aligning people with compatible values, abilities and skills (in that order) will ensure that the group will form a strong bond, and before long you will be cultivating both meaningful work and meaningful relationships.

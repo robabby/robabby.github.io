@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     url: 'https://lumen.netlify.com',
-    title: 'Blog by Rob Abby',
-    subtitle: 'A delicate harmony of discord',
+    title: 'Rob Abby',
+    subtitle: 'Frontend, UX & Product Professional',
     copyright: '© All rights reserved.',
     disqusShortname: '',
     menu: [
@@ -22,11 +22,9 @@ module.exports = {
     author: {
       name: 'Rob Abby',
       email: 'hello@robabby.com',
-      telegram: '#',
+      linkedin: 'robabby',
       twitter: '@robabby83',
-      github: 'https://github.com/robabby',
-      rss: '#',
-      vk: '#'
+      github: 'robabby'
     }
   },
   plugins: [
@@ -99,9 +97,7 @@ module.exports = {
         plugins: [
           {
             resolve: 'gatsby-remark-images',
-            options: {
-              maxWidth: 960
-            }
+            options: { maxWidth: 960 }
           },
           {
             resolve: 'gatsby-remark-responsive-iframe',
@@ -120,10 +116,8 @@ module.exports = {
       options: { trackingId: 'UA-73379983-2' }
     },
     {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`roboto\:400,400i,500,700`]
-      }
+      resolve: 'gatsby-plugin-google-fonts',
+      options: { fonts: ['roboto:400,400i,500,700'] }
     },
     {
       resolve: 'gatsby-plugin-sitemap',
