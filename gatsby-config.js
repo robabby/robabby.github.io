@@ -4,7 +4,7 @@ module.exports = {
     title: 'Rob Abby',
     subtitle: 'UI/UX & Product Professional',
     copyright: '© All rights reserved.',
-    disqusShortname: '',
+    disqusShortname: 'robabby',
     menu: [
       {
         label: 'Articles',
