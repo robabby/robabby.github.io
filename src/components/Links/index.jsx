@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.scss';
 import '../../assets/fonts/fontello-771c82e0/css/fontello.css';
-import resume from '../../pages/resume.pdf';
+import resume from '../../assets/documents/resume.pdf';
 
 class Links extends React.Component {
   render() {
