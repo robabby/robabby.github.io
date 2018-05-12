@@ -22,7 +22,7 @@ tags:
 description: "Welcome to my shiny new website! Allow me to introduce myself, and set the intent for this site and how I will be using it over the coming months."
 ---
 
-Hello interwebs! Whoever you are that is currently here reading this post, you're awesome!  Thank you for taking the time to check me out.  If you haven't already done so, go ahead and [read up on me](/about/) and get to know who I am. Please don't hesitate to connect with me and share your deepest darkest fears and secrets.
+Hello interwebs! Whoever you are that is currently here reading this post, you're awesome!  Thank you for taking the time to check me out and I hope to make your stay worthwhile.  If you haven't already done so, go ahead and [learn about me](/about/) and get to know who I am. Please don't hesitate to connect with me and share your deepest darkest fears and secrets.
 
 As the title suggests, this is the first post on my cool new website built using the fantastic [Gatsby.js](https://www.gatsbyjs.org/).  Gatsby calls itself a blazing-fast static site generator built for [React](https://reactjs.org/).  It is is a ton of fun to use, and I highly recommend people to check it out.  Gatsby has a ton of awesome [starters](https://www.gatsbyjs.org/docs/gatsby-starters/) to get your site off the ground quickly, and this site was built using the [Lumen Starter](https://github.com/alxshelepenok/gatsby-starter-lumen).
 
