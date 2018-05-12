@@ -8,7 +8,7 @@ Hey there!  My name is Rob, and I am a design-minded individual who has enjoyed 
 
 ### In the beginning...
 
-I have always someone driven by creativity and feel.  Growing up my best friend [Joe](http://joesid.com/) and I were always building and creating things.  Someday I may write a post detailing the rocket car we built using [LEGO Technics](https://www.amazon.com/LEGO-Technic-Rally-42077-Building/dp/B075QZMNY8/) & [Hobby Rocket Engines](https://en.wikipedia.org/wiki/Model_rocket). We loved to draw, and thought for certain we would make a video game someday (which could totally still happen).  Moving into High School I began to discover writing, and started writing short stories and poetry.  In 2002 I was nominated for Poet of the Year by the now dead Poetry.com for my poem [Breathe](/poetry/breathe).  
+I have always someone driven by creativity and feel.  Growing up my best friend [Joe](http://joesid.com/) and I were always building and creating things.  Someday I may write a post detailing the rocket car we built using [LEGO Technics](https://www.amazon.com/LEGO-Technic-Rally-42077-Building/dp/B075QZMNY8/) & [Hobby Rocket Engines](https://en.wikipedia.org/wiki/Model_rocket). We loved to draw, and thought for certain we would make a video game someday (which could totally still happen).  Moving into High School I began to discover writing, and started writing short stories and poetry.  In 2002 at 19 years old I was nominated for Poet of the Year by the now dead Poetry.com for my poem [Breathe](/poetry/breathe).  
 
 ### Livin' the dream
 
