@@ -15,8 +15,8 @@ module.exports = {
         path: '/about/'
       },
       {
-        label: 'Contact me',
-        path: '/contact/'
+        label: 'Sandbox',
+        path: '/sandbox/'
       }
     ],
     author: {
