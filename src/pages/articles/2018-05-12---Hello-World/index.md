@@ -18,7 +18,7 @@ tags:
   - "Neurofeedback"
   - "Video Games"
   - "Entrepreneur"
-description: "Welcome to my shiny new website! Allow me to introduce myself, and set the intent for this site and how I will be using it over the coming months."
+description: "Welcome to my shiny new website! Allow me to introduce myself, and set the intent for this site and how I will be using it moving forward."
 ---
 
 Hello interwebs! Whoever you are that is currently here reading this post, you're awesome!  Thank you for taking the time to check me out and I hope to make your stay worthwhile.  If you haven't already done so, go ahead and [learn about me](/about/) and get to know who I am. Please don't hesitate to connect with me and share your deepest darkest fears and secrets.
