@@ -4,7 +4,24 @@ layout: page
 path: "/sandbox"
 ---
 
-This is to be the home of things I am building. Stay tuned!
+#### WeatherSpy
+
++ __Git repo:__ https://github.com/robabby/WeatherSpy
++ __URL:__ https://weatherspy.netlify.com/
++ __Description:__ A weather application that uses Gatsby.js and the [OpenWeatherMap API](https://openweathermap.org/api).  Very much still a work in progress.
+
+#### MoodMeter
+
++ __Git repo:__ https://github.com/robabby/MoodMeter
++ __URL:__ https://expo.io/@robabby/MoodMeter
++ __Description:__ An application that supports your personal development by allowing you track your moods throughout the day and add other relevant metadata to your mood like location, people, websites, etc.  Built using React Native and Expo XDE.
+
+#### Nootristack
+
++ __Git repo:__ https://github.com/robabby/Nootristack
++ __URL:__ https://nootristack.herokuapp.com/
++ __Description:__ An application that tracks your Nootropic inventory.  The goal is to keep track of your inventory, track monthly cost, know when you should purchase more supplements, and potentially recommend supplements that go well with your stack.
+
 
 <!-- Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.
 
