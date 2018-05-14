@@ -6,27 +6,33 @@ path: "/sandbox"
 
 #### WeatherSpy
 
-+ __Git repo:__ https://github.com/robabby/WeatherSpy
 + __URL:__ https://weatherspy.netlify.com/
-+ __Description:__ A weather application that uses Gatsby.js and the [OpenWeatherMap API](https://openweathermap.org/api).  Very much still a work in progress.
++ __Git repo:__ https://github.com/robabby/WeatherSpy
++ __Description:__ A weather application that uses Gatsby.js and the [OpenWeatherMap API](https://openweathermap.org/api).  Still a work in progress.
 
 #### MoodMeter
 
-+ __Git repo:__ https://github.com/robabby/MoodMeter
 + __URL:__ https://expo.io/@robabby/MoodMeter
-+ __Description:__ An application that supports your personal development by allowing you track your moods throughout the day and add other relevant metadata to your mood like location, people, websites, etc.  Built using React Native and Expo XDE.
++ __Git repo:__ https://github.com/robabby/MoodMeter
++ __Description:__ An application that supports your personal development by allowing you track your moods throughout the day and add other relevant metadata to your mood like location, people, websites, etc.  Built using React Native and Expo XDE.  Still a work in progress.
 
 #### Nootristack
 
-+ __Git repo:__ https://github.com/robabby/giphy-bot
 + __URL:__ https://nootristack.herokuapp.com/
-+ __Description:__ An application that tracks your Nootropic inventory.  The goal is to keep track of your inventory, track monthly cost, know when you should purchase more supplements, and potentially recommend supplements that go well with your stack.
++ __Git repo:__ https://github.com/robabby/giphy-bot
++ __Description:__ An application that tracks your Nootropic inventory.  The goal is to keep track of your inventory, track monthly cost, know when you should purchase more supplements, and potentially recommend supplements that go well with your stack.  Still a work in progress.
 
 #### Giphy Discord Bot
 
-+ __Git repo:__ https://github.com/robabby/Nootristack
 + __URL:__ *N/A*
-+ __Description:__ Since Discord doesn't support the `/giphy [search term]` command on mobile, I went ahead and built my own Giphy bot that uses `!giphy [search term]` so my clanmates and I can still use gifs to communicate.
++ __Git repo:__ https://github.com/robabby/Nootristack
++ __Description:__ Since Discord _still_ doesn't support the `/giphy [search term]` command on mobile, I went ahead and built my own Giphy bot that uses `!giphy [search term]` so my clanmates and I can still use gifs to communicate.
+
+#### CSS Lunch & Learn
+
++ __URL:__ http://robabby.github.io/lunch-and-learn/
++ __Git repo:__ https://github.com/robabby/lunch-and-learn
++ __Description:__ A few years ago I took it upon myself to create a tutorial site to help teach other developers at Savo about the front-end who may not be familiar with some of the more nuanced fundamentals like CSS computed specificity, clears and floats.  I built the site using the [Jekyll](https://jekyllrb.com/) framework.
 
 
 <!-- Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.
