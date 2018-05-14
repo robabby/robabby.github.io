@@ -37,7 +37,7 @@ class Links extends React.Component {
             </a>
           </li>
         </ul>
-        <a href={resume} className="sidebar__resume-button">Resume</a>
+        <a href={resume} className="sidebar__resume-button">Résumé</a>
       </div>
     );
   }
