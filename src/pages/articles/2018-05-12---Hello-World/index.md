@@ -32,7 +32,7 @@ I have a broad amount of passions and interests, so as this site matures here ar
 + As an avid reader, I want to start writing book reports on the books that I read.  To both share the knowledge I find as valuable, and to help cement the content in my brain.
 + Thoughts and reflections on the tech industry
 + Website & Application Development Tutorials along with new learnings and challenges I overcome developing applications and websites.
-+ Thoughts and concepts cover personal development, and the self-discover process.
++ Thoughts and concepts covering personal development, and the self-discover process.
 + Things that support a healthy lifestyle including exercise, diet, yoga, neurofeedback & nootropics.
 + I am a passionate gamer, so expect thoughts and impressions on video games, the state of game industry, eSports, and Destiny (Bungie pls).
 + As someone embracing their entrepreneurial spirit, I will be sharing experiences and reflections on starting and growing my own business.
