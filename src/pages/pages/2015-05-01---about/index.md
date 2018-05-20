@@ -6,7 +6,13 @@ path: "/about"
 
 Hey there!  My name is Rob, and I am a design-minded individual who has enjoyed collaborating with Product, User Experience, and development teams.  I have a passion for high-functioning, cross-disciplinary teams that focus on a user-centered discovery process where collaboration and growth are the core values.  Nothing is more exciting to me than working with a group of people who can infuse their passions with a purpose beyond themselves to cultivate meaningful work and meaningful relationships.
 
-### In the beginning...
+I prefer to surround myself with people who are humble and driven, and no longer have much patience for *ninjas* or *rockstars*.  Untapped potential excites me, and providing people with a platform to create and collaborate effectively in a supportive and encouraging environment is one of my favorite ways to contribute and nurture individual growth.
+
+I am coming off of a 5 year stint working as a Senior User Experience & Product Developer for [The SAVO Group](http://savogroup.com/).  SAVO was recently acquired by [Seismic](https://seismic.com/) which ended many peoples tenure there, myself included.  Over my time at SAVO the company was continually transforming, and each chapter taught me an incredible deal about the the world of software development.  Sometime soon I will write a post detailing my experience at SAVO and reflect on my experiences.
+
+SAVO allowed me to refine my craft, and gain exposure to new teams and concepts like User Experience, Agile, and practicing Lean Methodologies.  As my perception expanded I learned to embrace that not all problems can be solved with code. I was fortunate enough to play a role in building a team who infused the passion for their craft with a mutual purpose to grow and have an impact together.  We quickly grew into an amazing UI/UX team, and together we impacted nearly every aspect of SAVO's organization.  
+
+<!-- ### In the beginning...
 
 I have always someone driven by creativity and feel.  Growing up my best friend [Joe](http://joesid.com/) and I were always building and creating things.  Someday I may write a post detailing the rocket car we built using [LEGO Technics](https://www.amazon.com/LEGO-Technic-Rally-42077-Building/dp/B075QZMNY8/) & [Hobby Rocket Engines](https://en.wikipedia.org/wiki/Model_rocket). We loved to draw, and thought for certain we would make a video game someday (which could totally still happen).  Moving into High School I began to discover writing, and started writing short stories and poetry.  In 2002 at 19 years old I was nominated for Poet of the Year by the now dead Poetry.com for my poem [Breathe](/poetry/breathe).  
 
@@ -26,6 +32,6 @@ Fast forward to today, and I am coming off of a 5 year stint working as a Senior
 
 My time at SAVO allowed me to refine my craft, and gain exposure to new teams and concepts like User Experience, Agile, and practicing Lean Methodologies.  As my perception expanded I learned to embrace that not all problems can be solved with code. I was fortunate enough to play a role in building a team who infused the passion for their craft with a mutual purpose to grow and have an impact together.  We quickly grew into one of the best UI/UX teams many of our peers had the pleasure to work with, and together we impacted nearly every aspect of SAVO's organization.  
 
-I prefer to surround myself with people who are humble and driven, and no longer have much patience for *ninjas* or *rockstars*.  Untapped potential excites me, and providing people with a platform to create and collaborate effectively in a supportive and encouraging environment is one of my favorite ways to contribute and nurture individual growth.
+I prefer to surround myself with people who are humble and driven, and no longer have much patience for *ninjas* or *rockstars*.  Untapped potential excites me, and providing people with a platform to create and collaborate effectively in a supportive and encouraging environment is one of my favorite ways to contribute and nurture individual growth. -->
 
 ---
