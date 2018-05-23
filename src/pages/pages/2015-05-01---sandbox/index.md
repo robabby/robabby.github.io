@@ -19,13 +19,13 @@ path: "/sandbox"
 #### Nootristack
 
 + __URL:__ https://nootristack.herokuapp.com/
-+ __Git repo:__ https://github.com/robabby/giphy-bot
++ __Git repo:__ https://github.com/robabby/Nootristack
 + __Description:__ An application that tracks your Nootropic supplement inventory.  The goal is to keep track of your inventory, track monthly cost, know when you should purchase more supplements, and potentially recommend supplements that go well with your stack. Built using create-react-app and Node.js. Still a work in progress.
 
 #### Giphy Discord Bot
 
 + __URL:__ *N/A*
-+ __Git repo:__ https://github.com/robabby/Nootristack
++ __Git repo:__ https://github.com/robabby/giphy-bot
 + __Description:__ Since Discord _still_ doesn't support the `/giphy [search term]` command on mobile, I went ahead and built my own Giphy bot that uses `!giphy [search term]` so my clanmates and I can still use gifs to communicate.
 
 #### CSS Lunch & Learn
