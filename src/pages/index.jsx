@@ -27,26 +27,26 @@ class IndexRoute extends React.Component {
             </div>
           </div>
         </div>
-        <div className="particle-wrapper">
+        {/* <div className="particle-wrapper">
           <div className="particle-mask" />
           <Particles
             className="particle-container"
             params={{
-              particles: {
-                number: { value: 35 },
-                line_linked: {
-                  distance: 250,
-                  shadow: {
-                    enable: true,
-                    color: '#121212',
-                    blur: 0.25
-                  }
-                },
-                move: { speed: 1 }
-              }
+          particles: {
+          number: { value: 35 },
+          line_linked: {
+          distance: 250,
+          shadow: {
+          enable: true,
+          color: '#121212',
+          blur: 0.25
+          }
+          },
+          move: { speed: 1 }
+          }
             }}
           />
-        </div>
+        </div> */}
       </div>
     );
   }
