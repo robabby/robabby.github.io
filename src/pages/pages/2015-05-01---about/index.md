@@ -18,8 +18,6 @@ I am now offering my unique set of talents, abilities and skills to the market a
     <li><h4>Branding for your product, service or business with identity and logo design</h4></li>
     <li><h4>Custom application development</h4></li>
     <li><h4>Wireframing and Prototyping</h4></li>
-    <!-- <li><h4>Running Google Design Sprints and Design Workshops for your team</h4></li>
-    <li><h4>Front-end Development Consulting</h4></li> -->
   </ul>
 </div>
 <!-- I am coming off of a 5 year stint working as a Senior User Experience & Product Developer for [The SAVO Group](http://savogroup.com/).  SAVO was recently acquired by [Seismic](https://seismic.com/) which ended many peoples tenure there, myself included.  Over my time at SAVO the company was continually transforming, and each chapter taught me an incredible deal about the the world of software development.  Sometime soon I will write a post detailing my experience at SAVO and reflect on my experiences.
