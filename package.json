@@ -20,7 +20,7 @@
     "theme",
     "starter"
   ],
-  "author": "Alexander Shelepenok <alxshelepenok@gmail.com>",
+  "author": "Rob Abby <hello@robabby.com>",
   "license": "MIT",
   "dependencies": {
     "bluebird": "^3.5.1",
