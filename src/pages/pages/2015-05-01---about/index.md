@@ -4,13 +4,27 @@ layout: page
 path: "/about"
 ---
 
-Hey there!  My name is Rob, and I am a design-minded individual who has enjoyed collaborating with Product, User Experience, and development teams.  I have a passion for high-functioning, cross-disciplinary teams that focus on a user-centered discovery process where collaboration and growth are the core values.  Nothing is more exciting to me than working with a group of people who can infuse their passions with a purpose beyond themselves to cultivate meaningful work and meaningful relationships.
+Hey there!  My name is Rob, and I am a design-minded individual who has enjoyed collaborating with Product, User Experience, and development teams in a startup environment.  I have a passion for high-functioning, cross-disciplinary teams that focus on an agile, user-centered discovery process where collaboration and growth are the core values.  I love working with people who can infuse the passion for what they do with a purpose beyond themselves to cultivate meaningful work and meaningful relationships.
 
-I prefer to surround myself with people who are humble and driven, and no longer have much patience for *ninjas* or *rockstars*.  Untapped potential excites me, and providing people with a platform to create and collaborate effectively in a supportive and encouraging environment is one of my favorite ways to contribute and nurture individual growth.
+I have a knack for bringing different people with different disciplines and backgrounds together and helping to imrove collaboration.  Where I accel is building bridges between groups of people (like product and development teams) and helping to promote collaboration and communication.  At SAVO I was fortunate enough to play a role in building a cross-dsciplinary UI/UX team, and together we impacted nearly every aspect of SAVO's organization. Together we improved our process, culture, and software in the eyes of both our customers and our stakeholders.
 
-I am coming off of a 5 year stint working as a Senior User Experience & Product Developer for [The SAVO Group](http://savogroup.com/).  SAVO was recently acquired by [Seismic](https://seismic.com/) which ended many peoples tenure there, myself included.  Over my time at SAVO the company was continually transforming, and each chapter taught me an incredible deal about the the world of software development.  Sometime soon I will write a post detailing my experience at SAVO and reflect on my experiences.
+I am now offering my unique set of talents, abilities and skills to the market as a freelance consultant.  I am accepting work from anyone who thinks that the value I bring aligns with the goals of their business or organization.  With experience in Freelancing, Product Ownership, Software Development, and User Experience, I can help you solve problems and reach outcomes that were previously unobtainable.
 
-SAVO allowed me to refine my craft, and gain exposure to new teams and concepts like User Experience, Agile, and practicing Lean Methodologies.  As my perception expanded I learned to embrace that not all problems can be solved with code. I was fortunate enough to play a role in building a team who infused the passion for their craft with a mutual purpose to grow and have an impact together.  We quickly grew into an amazing UI/UX team, and together we impacted nearly every aspect of SAVO's organization.  
+## I can help with the following:
+
+<div class="about-services">
+  <ul>
+    <li><h4>Custom websites for your product or service</h4></li>
+    <li><h4>Branding for your product, service or business with identity and logo design</h4></li>
+    <li><h4>Custom application development</h4></li>
+    <li><h4>Wireframing and Prototyping</h4></li>
+    <!-- <li><h4>Running Google Design Sprints and Design Workshops for your team</h4></li>
+    <li><h4>Front-end Development Consulting</h4></li> -->
+  </ul>
+</div>
+<!-- I am coming off of a 5 year stint working as a Senior User Experience & Product Developer for [The SAVO Group](http://savogroup.com/).  SAVO was recently acquired by [Seismic](https://seismic.com/) which ended many peoples tenure there, myself included.  Over my time at SAVO the company was continually transforming, and each chapter taught me an incredible deal about the the world of software development.  Sometime soon I will write a post detailing my experience at SAVO and reflect on my experiences.
+
+SAVO allowed me to refine my craft, and gain exposure to new teams and concepts like User Experience, Agile, and practicing Lean Methodologies.  As my perception expanded I learned to embrace that not all problems can be solved with code. I was fortunate enough to play a role in building a team who infused the passion for their craft with a mutual purpose to grow and have an impact together.  We quickly grew into an amazing UI/UX team, and together we impacted nearly every aspect of SAVO's organization.   -->
 
 <!-- ### In the beginning...
 
