@@ -1,9 +1,9 @@
 ---
-title: "SmashingConf Toronto 2018: Reigniting the Spark"
+title: "SmashingConf Toronto: Reigniting the Spark"
 date: "2018-07-04T22:40:32.169Z"
 layout: post
 draft: false
-path: "/posts/smashing-conf-2018-reigniting-the-spark/"
+path: "/posts/smashing-conf-toronto-reigniting-the-spark/"
 category: "Events"
 tags:
   - "Design"
