@@ -1,10 +1,10 @@
 ---
 title: "SmashingConf Toronto 2018: Reigniting the Spark"
-date: "2017-08-19T22:40:32.169Z"
+date: "2018-07-04T22:40:32.169Z"
 layout: post
 draft: false
 path: "/posts/smashing-conf-2018-reigniting-the-spark/"
-category: "Typography"
+category: "Events"
 tags:
   - "Design"
   - "Development"
@@ -27,9 +27,8 @@ The idea to host a conference sans-PowerPoint appeared to be the brain-child of 
 
 ## The DJ
 
-<img style="width: 300px; float: right;" src="toby-dancing.gif">
 
-Yeah, that's right. A DJ.  For the first time in my tech conference experience, SmashingConf decided to have [DJ Baldower](https://twitter.com/baldower) (a.k.a. Toby Lessnow) in attendance who sat on the stage for the entirety of the event and would sample statements from presentations on stage into the mixes he played during breaks and between speakers.  Admittedly at first I was rather put off by the idea of a DJ at 8:30AM on a Tuesday as we were finding our first seats, but as I watched Toby have fun on stage, and listened to his music, he converted me to a fan within minutes.  How can you not have fun watching this guy do his thing at a tech conference?  
+<img style="width: 300px; float: right; margin-left: 5px;" src="toby-dancing.gif"> Yeah, that's right. A DJ.  For the first time in my tech conference experience, SmashingConf decided to have [DJ Baldower](https://twitter.com/baldower) (a.k.a. Toby Lessnow) in attendance who sat on the stage for the entirety of the event and would sample statements from presentations on stage into the mixes he played during breaks and between speakers.  Admittedly at first I was rather put off by the idea of a DJ at 8:30AM on a Tuesday as we were finding our first seats, but as I watched Toby have fun on stage, and listened to his music, he converted me to a fan within minutes.  How can you not have fun watching this guy do his thing at a tech conference?  
 
 Toby hung out with us for a while during the After party on Tuesday night and we got to hear his inspiring story of coming to America as a 17 year old exchange student, and how that opened him to a whole new life-path and inevitably inspired him to become the DJ he now is.  During a time where topics like immigration are so forward in everyones awareness, and it was inspiring to hear Toby recount his experiences to us.  Toby's character was as refreshing as his music, and the conference wouldn't have left as big of an impression without him. Having attended a number of Tony Robbins events, I know how effective music is to keep people awake and help maintain focus for long stretches of sitting and listening to topics that can be quite dry, even to those of us who are passionate about them.
 
@@ -48,6 +47,8 @@ The two speakers who stole the show for me were [Yiying Lu](https://twitter.com/
 ## Conclusion
 
 In closing, SmashingConf was a fun and engaging experience.  Contrasted with An Event Apart which I attended in Chicago 2017, I'd say they are doing a great job keeping their brand at the top end of the conference circuit. There was a decent amount of speaker cross-over between the two conferences, so it feels like they are doing their best to nurture the community collaboratively.  Next time I hope to get the attend some of the workshops on day 3 and go deeper into the subjects covered on stage directly with a speaker.  Thank you to SmashingConf for hosting a quality event, and for reigniting a spark that had laid dormant in me for far too long.
+
+![Toronto Skyline](./toronto-skyline.jpg)
 
 <!-- ![toby-dancing.gif](./toby-dancing.gif) -->
 
