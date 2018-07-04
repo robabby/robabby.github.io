@@ -14,10 +14,10 @@ I am now offering my set of talents, abilities and skills to the market as a fre
 
 <div class="about-services">
   <ul>
+    <li><h4>Wireframing and Prototyping</h4></li>
+    <li><h4>Custom application development</h4></li>
     <li><h4>Custom websites for your product or service</h4></li>
     <li><h4>Branding for your product, service or business with identity and logo design</h4></li>
-    <li><h4>Custom application development</h4></li>
-    <li><h4>Wireframing and Prototyping</h4></li>
   </ul>
 </div>
 <!-- I am coming off of a 5 year stint working as a Senior User Experience & Product Developer for [The SAVO Group](http://savogroup.com/).  SAVO was recently acquired by [Seismic](https://seismic.com/) which ended many peoples tenure there, myself included.  Over my time at SAVO the company was continually transforming, and each chapter taught me an incredible deal about the the world of software development.  Sometime soon I will write a post detailing my experience at SAVO and reflect on my experiences.
