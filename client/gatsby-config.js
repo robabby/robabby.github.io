@@ -100,6 +100,16 @@ module.exports = {
             options: { maxWidth: 960 }
           },
           {
+            resolve: 'gatsby-remark-embed-video',
+            options: {
+              width: 800,
+              ratio: 1.77, // Optional: Defaults to 16/9 = 1.77
+              height: 400, // Optional: Overrides optional.ratio
+              related: false,
+              noIframeBorder: true // Optional: Disable insertion of <style> border: 0
+            }
+          },
+          {
             resolve: 'gatsby-remark-responsive-iframe',
             options: { wrapperStyle: 'margin-bottom: 1.0725rem' }
           },
@@ -150,16 +160,6 @@ module.exports = {
               priority: 0.7
             };
           })
-      }
-    },
-    {
-      resolve: 'gatsby-remark-embed-video',
-      options: {
-        width: 800,
-        ratio: 1.77, // Optional: Defaults to 16/9 = 1.77
-        height: 400, // Optional: Overrides optional.ratio
-        related: false,
-        noIframeBorder: true // Optional: Disable insertion of <style> border: 0
       }
     },
     'gatsby-plugin-offline',

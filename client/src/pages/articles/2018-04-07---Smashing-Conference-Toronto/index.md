@@ -34,15 +34,29 @@ Toby hung out with us for a bit during the after party on Tuesday night and he r
 
 ## The Speakers
 
-The speakers covered a diverse range of topics, and there was a healthy balance between Design and Development with a sprinkling of UX, Performance, & Accessibility.  Admittedly my friends and I had a great time at the afterparty on Tuesday so we were a little late to the conference on Wednesday and we missed the first two speakers. Each individual overcame the no-slide limitation in their own way.
+The speakers covered a diverse range of topics, and there was a healthy balance between Design and Development with a sprinkling of UX, Performance, & Accessibility.  Admittedly my friends and I had a great time at the afterparty on Tuesday so we were a little late to the conference on Wednesday and we missed the first two speakers. Each individual overcame the no-slide limitation in their own way. **Note: I'll add links to the speaker videos once they're published.**
 
-[Joe Leech](https://twitter.com/mrJoe) reverted back to his teaching roots when speaking of UX Psychology and used an overhead camera similar to the old-school projectors from my grade school days.  
+#### Day 1
 
 [Dan Mall](https://twitter.com/danielmall) demonstrated some great approaches to the creative design process and overcoming the challenge of a blank page.  It was humorous watching dan using his Photoshop layers as a replacement for Powerpoint, but as he worked in the tool he used for his job, you got a better impression of how he works which brilliantly captured the essence of why PowerPoint was frowned upon.
 
-[Gemma O'Brien](https://twitter.com/mrseaves) spoke about lettering design, and essentially turned the stage into a mini art studio.  She borrowed the overhead camera from Joe Leech's talk and brilliantly walked us through the amazing work she did, and then how we can bring the essence of her process into the work we do.  Her creativity was infectious, and the quality of her speech and her work left a lasting impression.
+[Joe Leech](https://twitter.com/mrJoe) reverted back to his teaching roots when speaking of UX Psychology and used an overhead camera similar to the old-school projectors from my grade school days.  
 
 The two speakers who stole the show for me were [Yiying Lu](https://twitter.com/YiyingLu) and [Aaron Draplin](https://twitter.com/draplin).  To the dismay of Vitaly, these two talks opted for the more traditional PowerPoint format. Regardless the quality of their speaking, and their infectious passion left a lasting impression on me.  These two talks are pretty difficult to sum up in this post (especially Aaron's.  That dude's crazy), but I can say that they have a knack for captivating an audience and delivering their message with quality and conviction. It was during Aaron's talk that I was struck with the absolute realization and inspiration that it was time to stop hiding from my true passion, and to finally pursue starting my own freelance consulting company.  Thank you, Aaron!
+
+#### Day 2
+
+[Gemma O'Brien](https://twitter.com/mrseaves) spoke about lettering design, and essentially turned the stage into a mini art studio.  She borrowed the overhead camera from Joe Leech's talk and brilliantly walked us through the amazing work she did, and then how we can bring the essence of her process into the work we do.  Her creativity was infectious, and the quality of her speech and her work left a lasting impression.
+
+[Eva-Lotta Lamm](https://twitter.com/evalottchen) also used the overhead projector and live-sketched a number of principles, concepts and best-practices in front of us demonstrating how to rapidly prototype features and ideas.  Unfortunately she ran out of time and flew through using the [Amazon Go](https://www.amazon.com/b?ie=UTF8&node=16008589011) store concept as a demonstration for all she taught us during the talk. Eva's talk was very engaging, and I was bummed had to sprint through the closing.  I'm looking forward to seeing her again.
+
+[Seb-Lee Delisle](https://twitter.com/seb_ly) closed out the show with a bang, demonstrating the video games and laser-light shows he's been hacking on for the majority of his career.  His humor was fun, and the stuff he was showcasing was a really inspiring way to close out the show.  This guy basically gets paid to play games with lasers and you can tell he's just having a blast and living his dream.  Just check out this video he shared of a collaboration he did with Val Head syncing visualizations, lasers and music to close out SmashingConf from 2015:
+
+<div class="post-body__video">
+
+`vimeo: 89624072`
+
+</div>
 
 ## Conclusion
 

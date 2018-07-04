@@ -19,6 +19,17 @@
         @include margin-bottom(0);
     }
     &__body {
+        .post-body__video {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          > div {
+            width: $layout-post-single-width;
+            height: 325px;
+            overflow:hidden;
+          }
+        }
         & figure {
             @include margin-bottom(1);
             & blockquote {
