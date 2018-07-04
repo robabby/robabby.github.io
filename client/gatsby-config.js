@@ -152,6 +152,16 @@ module.exports = {
           })
       }
     },
+    {
+      resolve: 'gatsby-remark-embed-video',
+      options: {
+        width: 800,
+        ratio: 1.77, // Optional: Defaults to 16/9 = 1.77
+        height: 400, // Optional: Overrides optional.ratio
+        related: false,
+        noIframeBorder: true // Optional: Disable insertion of <style> border: 0
+      }
+    },
     'gatsby-plugin-offline',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-react-helmet',
