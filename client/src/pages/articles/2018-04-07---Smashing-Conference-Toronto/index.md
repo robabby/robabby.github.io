@@ -15,7 +15,7 @@ tags:
 description: "I reflect on my experiences at the Smashing Conference, and exploring the city of Toronto."
 ---
 
-This past week I had the pleasure of visiting Toronto for the first time and experiencing the first [SmashingConf Toronto](https://www.smashingmagazine.com/events/toronto-2018/), and I would like to take some time and share my experiences from the event.  SmashingConf decided to do something rather controversial for this conference by asking all presenters to avoid using PowerPoint slides during their speeches.  A curious decision to be sure, and you could tell immediately that all of the speakers were far out of their comfort zone.  Fortunately, everyone who spoke is a professional at the top of their game, and operating outside of their comfort zone is something that seemed to only fuel the engagement in their talks.
+This past week I had the pleasure of visiting Toronto for the first time and experiencing [SmashingConf](https://www.smashingmagazine.com/events/toronto-2018/), and I would like to take some time and share my experiences from the event.  SmashingConf decided to do something rather controversial for this conference by asking all presenters to avoid using PowerPoint slides during their speeches.  A curious decision to be sure, and you could tell immediately that all of the speakers were far out of their comfort zone.  Fortunately, everyone who spoke is a professional at the top of their game, and operating outside of their comfort zone is something that seemed to only fuel the engagement in their talks.
 
 ## The City
 
