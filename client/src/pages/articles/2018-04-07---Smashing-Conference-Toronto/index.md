@@ -15,7 +15,7 @@ tags:
 description: "I reflect on my experiences at the Smashing Conference, and exploring the city of Toronto."
 ---
 
-This past week I had the pleasure of visiting Toronto for the first time and experiencing [SmashingConf](https://www.smashingmagazine.com/events/toronto-2018/), and I would like to take some time and share my experiences from the event.  SmashingConf decided to do something rather controversial for this conference by asking all presenters to avoid using PowerPoint slides during their speeches.  A curious decision to be sure, and you could tell immediately that the speakers were out of their comfort zone.  Fortunately speakers operating outside of their comfort zone is something that seemed to only fuel the engagement in the talks.
+This past week I had the pleasure of visiting Toronto for the first time and experiencing [SmashingConf](https://www.smashingmagazine.com/events/toronto-2018/), and I would like to take some time and share my experiences from the event.
 
 ## The City
 
@@ -37,7 +37,7 @@ Toby hung out with us for a bit during the after party on Tuesday night and he r
 
 ## The Speakers
 
-The speakers covered a diverse range of topics, and there was a healthy balance between Design and Development with a sprinkling of UX, Performance, & Accessibility.  Admittedly my friends and I had a great time at the afterparty on Tuesday so we were a little late to the conference on Wednesday and we missed the first two speakers. Each individual overcame the no-slide limitation in their own way. I'll just recount a few of the ones that stood out most to me. **Note: I'll add links to the speaker videos once they're published.**
+The speakers covered a diverse range of topics, and there was a healthy balance between Design and Development with a sprinkling of UX, Performance, & Accessibility.  SmashingConf decided to do something rather controversial for this conference by asking all presenters to avoid using PowerPoint slides during their speeches.  Each individual overcame the no-slide limitation in their own way (a couple not at all). I'll just recount a few of the ones that stood out most to me. **Note: I'll add links to the speaker videos once they're published.**
 
 #### Day 1
 
