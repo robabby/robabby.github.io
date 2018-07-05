@@ -21,6 +21,9 @@ This past week I had the pleasure of visiting Toronto for the first time and exp
 
 Toronto is awesome!  Coming from Chicago I am no stranger to a large, diverse city but Toronto redefined the term _integrated diversity_ for me.  The cultural diversity mixed with the generally relaxed Canadian vibe made for a cool experience.  The city itself was beautiful.  I took the time to explore Toronto for three days after the event with my wife and we made it to the Toronto Islands, Kensington Market, Yorkville, and Old Town.  Every area was super unique, and the fusion of old and new really delivered an intriguing vibe while walking around.  Luckily Thursday and Friday were sunny, 80F days so it was perfect exploring weather. Summer clearly brings the city to life, much like Chicago, and I found myself wondering if I'd ever willingly come visit in the winter.
 
+![Toronto Car Tree](./kensington-car-tree.jpg)
+*A Kensington Market Car Tree.*
+
 ## The Environment
 
 The idea to host a conference sans-PowerPoint appeared to be the brain-child of [Vitaly Friedman](https://www.smashingmagazine.com/author/vitaly-friedman/), co-founder of [Smashing Magazine](https://www.smashingmagazine.com/) and the host of SmashingConf.  The conference itself spanned Tuesday, June 26th to Wednesday, June 27th at the [TIFF Lightbox Theater](https://www.google.com/maps/place/TIFF+Bell+Lightbox/@43.6465295,-79.3904082,15z/data=!4m5!3m4!1s0x0:0x4f67cc5a0d114196!8m2!3d43.6465295!4d-79.3904082) in the heart of downtown Toronto.  I attended the conference with [Brittany Mikottis](http://www.mikottisdesign.com/), a Product Designer and [Allison Paul](https://www.linkedin.com/in/allisonpaul/), a UX researcher for Seismic, and the remaining SAVO employees.  All-in-all there was around 500 people in attendance, and the disciplines seemed to be evenly split between Design and Development, maybe weighing a little heavier on the development side.
