@@ -19,7 +19,7 @@ This past week I had the pleasure of visiting Toronto for the first time and exp
 
 ## The City
 
-Toronto is awesome!  Coming from Chicago I am no stranger to a large, diverse city but Toronto redefined the term _integrated diversity_ for me.  This was my first time in Toronto, and the general demeanor of the people was very refreshing.  The city itself was beautiful.  I took the time to explore Toronto for three days after the event with my wife and we made it to the Toronto Islands, Kensington Market, Yorkville, and Old Town.  Every area was super unique, and the fusion of old and new really delivered an intriguing vibe while walking around.  Luckily Thursday and Friday were sunny, 80F days so it was perfect exploring weather. Summer clearly brings the city to life, much like Chicago, and I found myself wondering if I'd ever willingly come visit in the winter.
+Toronto is awesome!  Coming from Chicago I am no stranger to a large, diverse city but Toronto redefined the term _integrated diversity_ for me.  The cultural diversity mixed with the generally relaxed Canadian vibe made for a cool experience.  The city itself was beautiful.  I took the time to explore Toronto for three days after the event with my wife and we made it to the Toronto Islands, Kensington Market, Yorkville, and Old Town.  Every area was super unique, and the fusion of old and new really delivered an intriguing vibe while walking around.  Luckily Thursday and Friday were sunny, 80F days so it was perfect exploring weather. Summer clearly brings the city to life, much like Chicago, and I found myself wondering if I'd ever willingly come visit in the winter.
 
 ## The Environment
 
