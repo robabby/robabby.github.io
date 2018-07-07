@@ -4,6 +4,8 @@ layout: page
 path: "/sandbox"
 ---
 
+This is a place to see the side-projects I am working on.  None of these applications are much to look at yet, but they feature my programming style and the technologies I use to build applications.
+
 #### WeatherSpy
 
 + __URL:__ https://weatherspy.netlify.com/
