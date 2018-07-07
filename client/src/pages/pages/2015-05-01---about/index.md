@@ -20,9 +20,12 @@ I am now offering my set of talents, abilities and skills to the market as a fre
     <li><h4>Branding for your product, service or business with identity and logo design</h4></li>
   </ul>
 </div>
-<!-- I am coming off of a 5 year stint working as a Senior User Experience & Product Developer for [The SAVO Group](http://savogroup.com/).  SAVO was recently acquired by [Seismic](https://seismic.com/) which ended many peoples tenure there, myself included.  Over my time at SAVO the company was continually transforming, and each chapter taught me an incredible deal about the the world of software development.  Sometime soon I will write a post detailing my experience at SAVO and reflect on my experiences.
 
-SAVO allowed me to refine my craft, and gain exposure to new teams and concepts like User Experience, Agile, and practicing Lean Methodologies.  As my perception expanded I learned to embrace that not all problems can be solved with code. I was fortunate enough to play a role in building a team who infused the passion for their craft with a mutual purpose to grow and have an impact together.  We quickly grew into an amazing UI/UX team, and together we impacted nearly every aspect of SAVO's organization.   -->
+### Interested in working together?
+
+Feel free to [send me an email](mailto:hello@robabby.com), or fill out my [New Project Questionnaire](https://docs.google.com/forms/d/1GrGdWexQ_afjCJWjQ3aNA6Z2o5_ZkUhsM-VWb_y9b6s/edit) to help me understand the type of project you have in mind.
+
+
 
 <!-- ### In the beginning...
 
