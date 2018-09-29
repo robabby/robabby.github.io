@@ -22,7 +22,50 @@ class IndexRoute extends React.Component {
           <Sidebar {...this.props} />
           <div className="content">
             <div className="content__inner">
-              {items}
+              <h1>About Me</h1>
+              <p>
+                Hey there!  My name is Rob, and I am a frontend developer
+                who has enjoyed collaborating with product, user experience, and
+                development teams in a startup environment.  I have a passion for
+                high-functioning, cross-disciplinary teams that focus on an agile,
+                user-centered discovery process where collaboration and growth are
+                the core values.  I love working with people who can infuse the
+                passion for what they do with a purpose beyond themselves to
+                cultivate meaningful work and meaningful relationships.
+              </p>
+
+              <p>
+                Where I excel is building bridges between groups
+                of people (like product and development teams) and helping to
+                promote collaboration and communication.
+              </p>
+
+              {/* <p>
+                I am now offering my set of talents, abilities and skills to the
+                market as a freelance developer and consultant.  I am accepting
+                work from anyone who thinks that the value I bring aligns with
+                the goals of their business or organization.  With experience in
+                Freelancing, Product Ownership, Software Development, and
+                User Experience, I can help you solve problems and reach
+                outcomes that were previously unobtainable.
+                </p>
+
+                <h2>I can help with the following:</h2>
+
+                <div className="about-services">
+                <ul>
+                  <li><h4>Wireframing and Prototyping</h4></li>
+                  <li><h4>Custom application development</h4></li>
+                  <li><h4>Custom websites for your product or service</h4></li>
+                  <li>
+                <h4>
+                Branding for your product, service or business with identity and logo design
+                </h4>
+                  </li>
+                </ul>
+              </div> */}
+
+              {/* {items} */}
             </div>
           </div>
         </div>

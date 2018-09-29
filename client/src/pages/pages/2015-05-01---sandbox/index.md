@@ -22,7 +22,7 @@ This is a place to see the side-projects I am working on.  None of these applica
 
 + __URL:__ https://nootristack.herokuapp.com/
 + __Git repo:__ https://github.com/robabby/Nootristack
-+ __Description:__ An application that tracks your Nootropic supplement inventory.  The goal is to keep track of your inventory, track monthly cost, know when you should purchase more supplements, and potentially recommend supplements that go well with your stack. Built using create-react-app and Node.js. Still a work in progress.
++ __Description:__ An application that tracks your Nootropic supplement inventory.  The goal is to keep track of your inventory, track monthly cost, know when you should purchase more supplements, and potentially recommend supplements that go well with your stack. Built using create-react-app and Node.js and deployed to Heroku. Still a work in progress.
 
 #### Giphy Discord Bot
 

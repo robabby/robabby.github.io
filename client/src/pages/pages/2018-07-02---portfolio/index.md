@@ -4,6 +4,8 @@ layout: page
 path: "/portfolio"
 ---
 
+_<b>Note:</b> this is just a couple of examples from my work with Savo and Web2Carz.  I am happy to provide more details and project examples upon request._
+
 ## SAVO
 
 My work for SAVO spanned multiple applications and disciplines from 2013 to 2018.  Over the years I performed Development, Product, and UX duties.  I will sample some of the work from our UI/UX team and touch on our collaborative process.
