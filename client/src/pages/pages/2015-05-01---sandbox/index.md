@@ -6,11 +6,11 @@ path: "/sandbox"
 
 This is a place to see the side-projects I am working on.  None of these applications are much to look at yet, but they feature my programming style and the technologies I use to build applications.
 
-#### WeatherSpy
+<!-- #### WeatherSpy
 
 + __URL:__ https://weatherspy.netlify.com/
 + __Git repo:__ https://github.com/robabby/WeatherSpy
-+ __Description:__ A weather application that uses Gatsby.js and the [OpenWeatherMap API](https://openweathermap.org/api).  Still a work in progress.
++ __Description:__ A weather application that uses Gatsby.js and the [OpenWeatherMap API](https://openweathermap.org/api).  Still a work in progress. -->
 
 #### MoodMeter
 
