@@ -25,19 +25,12 @@ class IndexRoute extends React.Component {
               <h1>About Me</h1>
               <p>
                 Hey there!  My name is Rob, and I am a frontend developer
-                who has enjoyed collaborating with product, user experience, and
+                with a passion for building engaging experiences for users on
+                the web. I enjoy collaborating with product, user experience, and
                 development teams in a startup environment.  I have a passion for
                 high-functioning, cross-disciplinary teams that focus on an agile,
                 user-centered discovery process where collaboration and growth are
-                the core values.  I love working with people who can infuse the
-                passion for what they do with a purpose beyond themselves to
-                cultivate meaningful work and meaningful relationships.
-              </p>
-
-              <p>
-                Where I excel is building bridges between groups
-                of people (like product and development teams) and helping to
-                promote collaboration and communication.
+                the core values.
               </p>
 
               {/* <p>
