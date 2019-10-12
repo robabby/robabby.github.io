@@ -6,7 +6,9 @@ export default () => {
   const getSize = useCallback(() => {
     return {
       width: innerWidth,
-      height: innerHeight
+      height: innerHeight,
+      middleX: innerWidth / 2,
+      middleY: innerHeight / 2
     };
   }, [innerWidth, innerHeight]);
 

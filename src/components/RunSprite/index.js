@@ -28,7 +28,7 @@ spritesheet.parse(() => {
 
 console.log(runTextures);
 
-let scale = { x: 3, y: 3 };
+let scale = { x: 3.5, y: 3.5 };
 let i = 0;
 
 const RunSprite = (props) => {
@@ -50,7 +50,7 @@ const RunSprite = (props) => {
 
   return (
     <Container
-      position={[size.width / 2, size.height / 2]}
+      position={[size.middleX, size.height - 145]}
     >
       <AnimatedSprite
         animationSpeed={0.1}
@@ -72,8 +72,8 @@ const RunSprite = (props) => {
         }}
         scale={scale}
         textures={runTextures}
-      // x={-150}
-      // y={-150}
+      // x={size.middleX}
+      // y={size.height - 100}
       // rotation={rotation}
       // x={x}
       // y={y}
