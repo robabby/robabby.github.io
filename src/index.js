@@ -1,4 +1,4 @@
-import render from './App';
+import render from './render';
 import * as serviceWorker from './serviceWorker';
 import './index.scss';
 

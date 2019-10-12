@@ -1,0 +1,170 @@
+{
+	"frames": {
+		"adventurer-run3-0.png": {
+			"frame": {
+				"x": 0,
+				"y": 0,
+				"w": 50,
+				"h": 37
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 50,
+				"h": 37
+			},
+			"sourceSize": {
+				"w": 50,
+				"h": 37
+			},
+			"anchor": {
+				"x": 0.5,
+				"y": 0.5
+			}
+		},
+		"adventurer-run3-1.png": {
+			"frame": {
+				"x": 0,
+				"y": 37,
+				"w": 50,
+				"h": 37
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 50,
+				"h": 37
+			},
+			"sourceSize": {
+				"w": 50,
+				"h": 37
+			},
+			"anchor": {
+				"x": 0.5,
+				"y": 0.5
+			}
+		},
+		"adventurer-run3-2.png": {
+			"frame": {
+				"x": 0,
+				"y": 74,
+				"w": 50,
+				"h": 37
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 50,
+				"h": 37
+			},
+			"sourceSize": {
+				"w": 50,
+				"h": 37
+			},
+			"anchor": {
+				"x": 0.5,
+				"y": 0.5
+			}
+		},
+		"adventurer-run3-3.png": {
+			"frame": {
+				"x": 0,
+				"y": 111,
+				"w": 50,
+				"h": 37
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 50,
+				"h": 37
+			},
+			"sourceSize": {
+				"w": 50,
+				"h": 37
+			},
+			"anchor": {
+				"x": 0.5,
+				"y": 0.5
+			}
+		},
+		"adventurer-run3-4.png": {
+			"frame": {
+				"x": 0,
+				"y": 148,
+				"w": 50,
+				"h": 37
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 50,
+				"h": 37
+			},
+			"sourceSize": {
+				"w": 50,
+				"h": 37
+			},
+			"anchor": {
+				"x": 0.5,
+				"y": 0.5
+			}
+		},
+		"adventurer-run3-5.png": {
+			"frame": {
+				"x": 0,
+				"y": 185,
+				"w": 50,
+				"h": 37
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 50,
+				"h": 37
+			},
+			"sourceSize": {
+				"w": 50,
+				"h": 37
+			},
+			"anchor": {
+				"x": 0.5,
+				"y": 0.5
+			}
+		}
+	},
+	"animations": {
+		"adventurer-run3": [
+			"adventurer-run3-0.png",
+			"adventurer-run3-1.png",
+			"adventurer-run3-2.png",
+			"adventurer-run3-3.png",
+			"adventurer-run3-4.png",
+			"adventurer-run3-5.png"
+		]
+	},
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"image": "spritesheet.png",
+		"format": "RGBA8888",
+		"size": {
+			"w": 50,
+			"h": 222
+		},
+		"scale": "1",
+		"smartupdate": "$TexturePacker:SmartUpdate:022f03c5ae0c91cdeeb7f85d5f585a8f:19ed6a3f667fcce1c315578e8965d3eb:729adc6043343cfda41c447ce8f464d6$"
+	}
+}
