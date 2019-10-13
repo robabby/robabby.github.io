@@ -1,51 +1,47 @@
 import {
   AnimatedSprite,
   Container,
-  useTick
+  useTick,
+  useApp
 } from "@inlet/react-pixi";
 import * as PIXI from "pixi.js";
 import React, { useState } from "react";
-import runSprite from "../../assets/Adventurer/run/spritesheet.png";
-import runSpriteJson from "../../assets/Adventurer/run/spritesheet.json";
+import controls from "../../config/controls";
+import idleWeaponTextures from "../../assets/Adventurer/idle/weapon";
+import runTextures from "../../assets/Adventurer/run";
 import render from "../../render";
 import useWindowSize from "../../hooks/useWindowSize";
 
-// create a base texture from the data-uri that webpack gives you
-const baseTexture = PIXI.BaseTexture.from(runSprite);
-// use the JS Object that webpack parsed from the json file to create a spritesheet
-const spritesheet = new PIXI.Spritesheet(baseTexture, runSpriteJson);
-
-let runTextures = [];
-
-// parse the object data and the base texture to create textures for each frame
-spritesheet.parse(() => {
-  // `spritesheet.textures` now has a texture for each frame, but in an object keyed
-  // by the name of the frame. This transforms that object into an array of frames so
-  // we can pass it directly into an animated sprite
-  runTextures = Object.keys(spritesheet.textures).map((t) => spritesheet.textures[t]);
-
-});
-
-console.log(runTextures);
-
 let scale = { x: 3.5, y: 3.5 };
 let i = 0;
+let texture = idleWeaponTextures;
 
 const RunSprite = (props) => {
+  const app = useApp();
   const size = useWindowSize();
+  const [animation, setAnimation] = useState(idleWeaponTextures);
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
   const [rotation, setRotation] = useState(0);
 
-  // increment
 
   // custom ticker
   useTick(delta => {
-    i += 0.05 * delta;
+    if (controls.right.isDown) {
+      console.log("right down", animation)
+      setAnimation(runTextures);
+      setX(Math.sin(i) * 100);
+      app.render();
+    } else if (controls.right.isUp) {
+      setAnimation(idleWeaponTextures);
+      app.render();
+    }
 
-    setX(Math.sin(i) * 100);
-    setY(Math.sin(i / 1.5) * 100);
-    setRotation(rotation + 0.1 * delta);
+    // i += 0.05 * delta;
+
+    // setX(Math.sin(i) * 100);
+    // setY(Math.sin(i / 1.5) * 100);
+    // setRotation(rotation + 0.1 * delta);
   });
 
   return (
@@ -71,12 +67,8 @@ const RunSprite = (props) => {
           render();
         }}
         scale={scale}
-        textures={runTextures}
-      // x={size.middleX}
-      // y={size.height - 100}
-      // rotation={rotation}
-      // x={x}
-      // y={y}
+        textures={animation}
+        x={x}
       />
     </Container>
   );

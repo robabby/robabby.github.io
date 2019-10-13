@@ -1,0 +1,47 @@
+{"frames": {
+
+"adventurer-idle-2-00.png":
+{
+	"frame": {"x":0,"y":0,"w":50,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":37},
+	"sourceSize": {"w":50,"h":37}
+},
+"adventurer-idle-2-01.png":
+{
+	"frame": {"x":50,"y":0,"w":50,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":37},
+	"sourceSize": {"w":50,"h":37}
+},
+"adventurer-idle-2-02.png":
+{
+	"frame": {"x":100,"y":0,"w":50,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":37},
+	"sourceSize": {"w":50,"h":37}
+},
+"adventurer-idle-2-03.png":
+{
+	"frame": {"x":150,"y":0,"w":50,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":37},
+	"sourceSize": {"w":50,"h":37}
+}},
+"animations": {
+	"adventurer-idle-2": ["adventurer-idle-2-00.png","adventurer-idle-2-01.png","adventurer-idle-2-02.png","adventurer-idle-2-03.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "spritesheet.png",
+	"format": "RGBA8888",
+	"size": {"w":200,"h":37},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:0a86b6628c18a5f9b9f0ae282ce509bc:78e2840623782e22f2ce4895c92cbcee:729adc6043343cfda41c447ce8f464d6$"
+}
+}
