@@ -1,16 +1,11 @@
 # dependencies
 node_modules
-
-# testing
-coverage
-
-# production
-build
-public/**
-
-# misc
+yarn-error.log
+.cache/
 .DS_Store
-.env
-npm-debug.log
-_ignore
-ecosystem.json
+
+# build directory
+public/
+
+# others
+*.d.ts

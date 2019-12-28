@@ -4,8 +4,8 @@ volumes:
   node_modules:
 
 services:
-  gatsby:
-    container_name: gatsby
+  robabby:
+    container_name: robabby
     build:
       context: .
     user: 'node'
