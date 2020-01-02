@@ -1,6 +1,6 @@
-import * as path from 'path'
-import { GatsbyCreatePages, UrlEntry } from './types'
-import routes from './routes'
+import * as path from "path"
+import { GatsbyCreatePages, UrlEntry } from "./types"
+import routes from "./routes"
 
 /**
  * Determines the template file by which an entry should be rendered.
@@ -20,25 +20,25 @@ const resolveEntryPath = ({ entryName, slug }: UrlEntry): string => {
  */
 const urlEntries: UrlEntry[] = [
   {
-    entryName: 'home',
-    slug: null,
+    entryName: "home",
+    slug: null
   },
   {
-    entryName: 'articlesOverview',
-    slug: null,
+    entryName: "blog",
+    slug: null
   },
   {
-    entryName: 'articles',
-    slug: 'entry-1',
-  },
+    entryName: "article",
+    slug: "entry-1"
+  }
 ]
 
 const createPages: GatsbyCreatePages = ({ actions: { createPage } }): void =>
   urlEntries.forEach(entry =>
     createPage({
       path: resolveEntryPath(entry),
-      component: resolveEntryTemplate(entry),
-    }),
+      component: resolveEntryTemplate(entry)
+    })
   )
 
 export { createPages }

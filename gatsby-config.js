@@ -4,11 +4,15 @@ module.exports = {
   siteMetadata: {
     siteName: `Rob Abby`,
   },
+  mapping: {
+    'MarkdownRemark.frontmatter.author': `AuthorJson`
+  },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-typescript',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    'gatsby-transformer-json',
     {
       resolve: 'gatsby-plugin-sass',
       options: {
@@ -43,10 +47,11 @@ module.exports = {
         path: `${__dirname}/data`
       }
     },
+    // TODO: Setup google analytics
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
     //   options: {
-    //     trackingId: 'YOUR_GOOGLE_ANALYTICS_TRACKING_ID',
+    //     trackingId: 'UA-32901659-1',
     //     // Puts tracking script in the head instead of the body
     //     head: false,
     //     // Setting this parameter is optional
@@ -58,7 +63,18 @@ module.exports = {
     {
       resolve: 'gatsby-transformer-remark',
       options: {
-        plugins: [],
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 690,
+              backgroundColor: `#f7f0eb`
+            }
+          },
+          `gatsby-remark-prismjs`,
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-autolink-headers`
+        ],
       },
     },
     {

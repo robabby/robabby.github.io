@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-typescript-scss-docker",
-  "description": "gatsby with typescript, scss typed modules, eslint, prettier & husky, docker",
+  "name": "robabby.com",
+  "description": "My website",
   "version": "1.0.0",
-  "author": "Oliver Franke ( oliver.franke@limebit.de )",
+  "author": "Rob Abby ( robabby23@gmail.com )",
   "keywords": [
     "gatsby, typescript, sass, docker, eslint, responsive"
   ],
@@ -100,10 +100,14 @@
     "gatsby-plugin-root-import": "2.0.5",
     "gatsby-plugin-sharp": "2.2.8",
     "gatsby-plugin-typescript": "2.1.2",
+    "gatsby-remark-autolink-headers": "^2.1.21",
+    "gatsby-remark-copy-linked-files": "^2.1.33",
     "gatsby-remark-images": "3.1.6",
+    "gatsby-remark-prismjs": "^3.3.28",
     "gatsby-transformer-json": "^2.2.22",
     "gatsby-transformer-sharp": "2.2.4",
     "lodash": "^4.17.15",
+    "prismjs": "^1.17.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",

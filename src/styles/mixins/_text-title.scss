@@ -2,24 +2,24 @@
   font-size: get-font-size(
     $size,
     $map: $map-text-sizes-title,
-    $viewport-context: 'small'
+    $viewport-context: "small"
   );
   line-height: get-line-height(
     $size,
     $map: $map-text-sizes-title,
-    $viewport-context: 'small'
+    $viewport-context: "small"
   );
 
   @media (min-width: #{map-get($breakpoints, 'medium')}) {
     font-size: get-font-size(
       $size,
       $map: $map-text-sizes-title,
-      $viewport-context: 'medium'
+      $viewport-context: "medium"
     );
     line-height: get-line-height(
       $size,
       $map: $map-text-sizes-title,
-      $viewport-context: 'medium'
+      $viewport-context: "medium"
     );
   }
 
@@ -27,12 +27,12 @@
     font-size: get-font-size(
       $size,
       $map: $map-text-sizes-title,
-      $viewport-context: 'large'
+      $viewport-context: "large"
     );
     line-height: get-line-height(
       $size,
       $map: $map-text-sizes-title,
-      $viewport-context: 'large'
+      $viewport-context: "large"
     );
   }
 
@@ -40,12 +40,12 @@
     font-size: get-font-size(
       $size,
       $map: $map-text-sizes-title,
-      $viewport-context: 'xlarge'
+      $viewport-context: "xlarge"
     );
     line-height: get-line-height(
       $size,
       $map: $map-text-sizes-title,
-      $viewport-context: 'xlarge'
+      $viewport-context: "xlarge"
     );
   }
 }

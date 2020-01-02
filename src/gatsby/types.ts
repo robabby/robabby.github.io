@@ -11,7 +11,7 @@ interface Actions {
 
 type GatsbyCreatePages = (fns: { actions: Actions }) => void
 
-type Templates = 'home' | 'articlesOverview' | 'articles'
+type Templates = "home" | "blog" | "article"
 
 interface UrlEntry {
   entryName: Templates
