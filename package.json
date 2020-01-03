@@ -17,27 +17,6 @@
     "generate": "plop --plopfile ./generators/plopfile.js",
     "graphql-types": "graphql-codegen --config ./graphql-config.yml"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{ts,tsx}": [
-      "eslint src/**/*.{ts,tsx} --max-warnings 0 --ignore-pattern '!.eslintrc.js'",
-      "eslint --fix src/**/*.{ts,tsx}",
-      "git add"
-    ],
-    "*.scss": [
-      "prettier --write",
-      "stylelint --fix",
-      "git add"
-    ],
-    "{*.{json,md}}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
   "devDependencies": {
     "@types/react": "^16.8.23",
     "@types/react-dom": "^16.8.4",
@@ -93,6 +72,7 @@
     "@graphql-codegen/typescript": "^1.9.1",
     "change-case": "^4.1.1",
     "emotion-theming": "^10.0.27",
+    "framer-motion": "^1.7.0",
     "gatsby": "^2.13.31",
     "gatsby-link": "^2.2.27",
     "gatsby-plugin-google-analytics": "^2.1.31",

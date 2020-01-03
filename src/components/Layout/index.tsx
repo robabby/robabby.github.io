@@ -1,10 +1,21 @@
 // import "prismjs/themes/prism-okaidia.css"
 import * as React from "react"
-import { Avatar, Box, Flex, ThemeProvider, theme } from "@chakra-ui/core"
+import {
+  Avatar,
+  Box,
+  ColorModeProvider,
+  Flex,
+  IconButton,
+  ThemeProvider,
+  theme,
+  useColorMode
+} from "@chakra-ui/core"
 import { Helmet } from "react-helmet"
 import { Link } from "gatsby"
 import fry from "../../assets/images/fry.jpg"
 import styles from "./styles.module.scss"
+
+const { useEffect } = React
 
 export interface LayoutProps {
   location: {
@@ -14,31 +25,52 @@ export interface LayoutProps {
 }
 
 const Layout = (props: any): any => {
+  // TODO: Setup Color Mode
+  const { colorMode, toggleColorMode } = useColorMode()
+  const isLightMode = colorMode === "light"
+
+  useEffect(() => {
+    console.log(theme)
+  }, [])
+
   return (
     <ThemeProvider theme={theme}>
-      <div className={styles.layout}>
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>Rob Abby</title>
-        </Helmet>
-        <Box w="100%" p={4} borderBottom="1px" borderBottomColor="gray.300">
-          <Flex justify="space-between" align="center">
-            <Link to="/">
-              <Avatar size="md" src={fry} />
-            </Link>
-            {/* TODO: Setup navigation */}
-            {/* <Flex>
-              <Box mr="4">
-                <Link to="/about">About</Link>
-              </Box>
-              <Box>
-                <Link to="/blog">Blog</Link>
-              </Box>
-            </Flex> */}
-          </Flex>
-        </Box>
-        {props.children}
-      </div>
+      <ColorModeProvider>
+        <div className={styles.layout}>
+          <Helmet>
+            <meta charSet="utf-8" />
+            <title>Rob Abby</title>
+          </Helmet>
+          <Box w="100%" h="100%" backgroundColor="gray.50">
+            <Box p={4}>
+              <Flex justify="space-between" align="center">
+                <Link to="/">
+                  <Avatar size="md" src={fry} />
+                </Link>
+                <Flex>
+                  <IconButton
+                    aria-label="Toggle Dark Mode"
+                    icon="moon"
+                    variant={isLightMode ? "ghost" : "solid"}
+                    variantColor="blue"
+                    onClick={toggleColorMode}
+                  />
+                  {/* TODO: Setup navigation */}
+                  {/* <Box mr="4">
+                    <Link to="/about">About</Link>
+                  </Box>
+                  <Box>
+                    <Link to="/blog">Blog</Link>
+                  </Box> */}
+                </Flex>
+              </Flex>
+            </Box>
+            <Box mx="auto" w={["100%", "1400px"]} h="100%">
+              {props.children}
+            </Box>
+          </Box>
+        </div>
+      </ColorModeProvider>
     </ThemeProvider>
   )
 }
