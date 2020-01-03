@@ -83,7 +83,7 @@ const IndexPage = (props): any => {
         }}
       />
       <MetatronsCude />
-      <Box position="absolute" top="30%" left="0" w="80%" p="4">
+      {/* <Box position="absolute" top="30%" left="0" w="80%" p="4">
         <Heading as="h1" fontSize="6xl">
           Rob Abby
         </Heading>
@@ -101,7 +101,7 @@ const IndexPage = (props): any => {
           cross-disciplinary teams that focus on an agile, user-centered
           discovery process where collaboration and growth are the core values.
         </Text>
-      </Box>
+      </Box> */}
     </Box>
   )
 }
