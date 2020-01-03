@@ -41,8 +41,21 @@ const Layout = (props: any): any => {
             <meta charSet="utf-8" />
             <title>Rob Abby</title>
           </Helmet>
-          <Box w="100%" h="100%" backgroundColor="gray.50">
-            <Box p={4}>
+          <Box
+            position="relative"
+            w="100%"
+            h="100vh"
+            overflowY="hidden"
+            backgroundColor="gray.700"
+          >
+            <Box
+              p={4}
+              position="absolute"
+              top="0"
+              right="0"
+              left="0"
+              zIndex="docked"
+            >
               <Flex justify="space-between" align="center">
                 <Link to="/">
                   <Avatar size="md" src={fry} />
@@ -65,7 +78,7 @@ const Layout = (props: any): any => {
                 </Flex>
               </Flex>
             </Box>
-            <Box mx="auto" w={["100%", "1400px"]} h="100%">
+            <Box mx="auto" w="100%" h="100%" zIndex="base">
               {props.children}
             </Box>
           </Box>

@@ -1,12 +1,88 @@
+/* eslint-disable @typescript-eslint/camelcase */
 import * as React from "react"
-import { Box, Heading, Image, Text } from "@chakra-ui/core"
-import chicago from "../assets/images/chicago.svg"
-import { withLayout } from "../components/Layout/index"
+import { Box, Heading, Text } from "@chakra-ui/core"
+import MetatronsCude from "../components/MetatronsCube"
+import Particles from "react-particles-js"
+import styles from "./index.module.scss"
+import svg from "../assets/images/metatrons_cube.svg"
+import { withLayout } from "../components/Layout"
 
 const IndexPage = (props): any => {
-  console.log(props)
   return (
     <Box position="relative" w="100%" h="100%">
+      <Particles
+        className={styles.wrapper}
+        canvasClassName={styles.canvas}
+        width="100%"
+        height="100%"
+        params={{
+          // polygon: {
+          //   enable: true,
+          //   scale: 0.5,
+          //   type: "inline",
+          //   move: {
+          //     radius: 10
+          //   },
+          //   url: svg,
+          //   inline: {
+          //     arrangement: "equidistant"
+          //   },
+          //   draw: {
+          //     enable: true,
+          //     stroke: {
+          //       color: "rgba(255, 255, 255, .2)"
+          //     }
+          //   }
+          // },
+          particles: {
+            number: {
+              value: 120,
+              density: {
+                enable: true,
+                value_area: 1500
+              }
+            },
+            line_linked: {
+              enable: true,
+              opacity: 0.02
+            },
+            move: {
+              direction: "right",
+              speed: 0.05
+            },
+            size: {
+              value: 1
+            },
+            opacity: {
+              anim: {
+                enable: true,
+                speed: 1,
+                opacity_min: 0.05
+              }
+            }
+          },
+          interactivity: {
+            events: {
+              onclick: {
+                enable: true,
+                mode: "push"
+              },
+              onhover: { enable: true, mode: "grab" }
+            },
+            modes: {
+              grab: {
+                distance: 200,
+                line_linked: { opacity: 0.15 }
+              },
+              push: {
+                particles_nb: 1
+              }
+            }
+          },
+          retina_detect: true
+        }}
+      />
+      <MetatronsCude />
       <Box position="absolute" top="30%" left="0" w="80%" p="4">
         <Heading as="h1" fontSize="6xl">
           Rob Abby
@@ -25,9 +101,6 @@ const IndexPage = (props): any => {
           cross-disciplinary teams that focus on an agile, user-centered
           discovery process where collaboration and growth are the core values.
         </Text>
-      </Box>
-      <Box position="absolute" w="40%" top="25%" right="0" p="4">
-        <Image src={chicago} />
       </Box>
     </Box>
   )
