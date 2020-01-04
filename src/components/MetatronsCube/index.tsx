@@ -1,5 +1,9 @@
+/* eslint-disable @typescript-eslint/camelcase */
 import * as React from "react"
 import { motion, useAnimation } from "framer-motion"
+import Particles from "react-particles-js"
+import styles from "./styles.module.scss"
+import svg from "../../assets/images/cube.svg"
 
 const { useState, useEffect } = React
 
@@ -41,15 +45,11 @@ const COLORS = {
   blue2: "rgba(144, 205, 244, .25)"
 }
 
-interface Props {
-  className?: string
-}
-
-const MetatronsCube = ({ className }: Props): any => {
+const MetatronsCube = (): any => {
   const [isChecked, setIsChecked] = useState(false)
   const lineControls = useAnimation()
   const gradientControls = useAnimation()
-  const rotateControls = useAnimation()
+  // const rotateControls = useAnimation()
 
   const innerSequence = async () => {
     await lineControls.start(i => ({
@@ -109,8 +109,8 @@ const MetatronsCube = ({ className }: Props): any => {
   }
 
   const outerLineVariants = {
-    hover: { scale: 1.05 },
-    pressed: { scale: 0.85 },
+    hover: { scale: 1.02 },
+    pressed: { scale: 0.95 },
     checked: {}
     // unchecked: { pathLength: 1 }
   }
@@ -128,76 +128,144 @@ const MetatronsCube = ({ className }: Props): any => {
   }, [])
 
   return (
-    <motion.svg
-      className={className}
-      initial={false}
-      animate={isChecked ? "checked" : "unchecked"}
-      whileHover="hover"
-      whileTap="pressed"
-      width="435"
-      height="482"
-      onClick={() => setIsChecked(!isChecked)}
-    >
-      <defs>
-        <motion.linearGradient
-          id="linearGradient"
-          x1="50%"
-          x2="50%"
-          y1="0%"
-          y2="100%"
-        >
-          <motion.stop
-            animate={gradientControls}
-            offset="0%"
-            stopColor={COLORS.pink}
-          />
-          <motion.stop
-            animate={gradientControls}
-            offset="100%"
-            stopColor={COLORS.blue}
-          />
-        </motion.linearGradient>
-      </defs>
-      <motion.g>
-        {INNER_LINES.map((def, i) => (
-          <motion.path
-            key={def}
-            d={def}
-            animate={lineControls}
-            custom={i}
-            fill="transparent"
-            initial={{
-              opacity: 0,
-              strokeWidth: 1,
-              strokeDasharray: DASH_ARRAY,
-              strokeDashoffset: 0,
-              strokeLinecap: "round"
-            }}
-            stroke={"url(#linearGradient)"}
-            variants={innerVariants}
-          />
-        ))}
-      </motion.g>
-      <motion.g>
-        {OUTER_LINES.map(def => (
-          <motion.path
-            key={def}
-            d={def}
-            animate={lineControls}
-            fill="transparent"
-            initial={{
-              opacity: 1,
-              strokeDasharray: DASH_ARRAY,
-              strokeDashoffset: ANIMATED_DASH_OFFSET,
-              strokeLinecap: "round",
-              strokeWidth: 1
-            }}
-            stroke={"url(#linearGradient)"}
-            variants={outerLineVariants}
-          />
-        ))}
-      </motion.g>
-    </motion.svg>
+    <>
+      <Particles
+        className={styles.cubeWrapper}
+        canvasClassName={styles.cubeCanvas}
+        params={{
+          polygon: {
+            enable: true,
+            scale: 1.5,
+            type: "inline",
+            move: {
+              radius: 5,
+              type: "path"
+            },
+            url: svg,
+            inline: {
+              arrangement: "equidistant"
+            },
+            draw: {
+              enable: true,
+              stroke: {
+                color: "rgba(255, 255, 255, .2)"
+              }
+            }
+          },
+          fps_limit: 28,
+          particles: {
+            number: {
+              value: 200,
+              density: {
+                enable: false
+              }
+            },
+            line_linked: {
+              enable: true,
+              distance: 25,
+              opacity: 0.25
+            },
+            move: {
+              speed: 1
+            },
+            opacity: {
+              anim: {
+                enable: true,
+                opacity_min: 0.05,
+                speed: 2,
+                sync: false
+              },
+              value: 0.4
+            }
+          },
+          interactivity: {
+            events: {
+              onhover: {
+                enable: false,
+                mode: "bubble"
+              }
+            },
+            modes: {
+              bubble: {
+                size: 6,
+                distance: 40
+              }
+            }
+          },
+          retina_detect: true
+        }}
+      />
+      <motion.svg
+        className={styles.cube}
+        initial={false}
+        animate={isChecked ? "checked" : "unchecked"}
+        whileHover="hover"
+        whileTap="pressed"
+        width="435"
+        height="482"
+        onClick={() => setIsChecked(!isChecked)}
+      >
+        <defs>
+          <motion.linearGradient
+            id="linearGradient"
+            x1="50%"
+            x2="50%"
+            y1="0%"
+            y2="100%"
+          >
+            <motion.stop
+              animate={gradientControls}
+              offset="0%"
+              stopColor={COLORS.pink}
+            />
+            <motion.stop
+              animate={gradientControls}
+              offset="100%"
+              stopColor={COLORS.blue2}
+            />
+          </motion.linearGradient>
+        </defs>
+        <motion.g>
+          {INNER_LINES.map((def, i) => (
+            <motion.path
+              key={def}
+              d={def}
+              animate={lineControls}
+              custom={i}
+              fill="transparent"
+              initial={{
+                opacity: 0,
+                strokeWidth: 1,
+                strokeDasharray: DASH_ARRAY,
+                strokeDashoffset: 0,
+                strokeLinecap: "round"
+              }}
+              stroke={"url(#linearGradient)"}
+              variants={innerVariants}
+            />
+          ))}
+        </motion.g>
+        <motion.g>
+          {OUTER_LINES.map(def => (
+            <motion.path
+              key={def}
+              d={def}
+              animate={lineControls}
+              fill="transparent"
+              initial={{
+                opacity: 1,
+                strokeDasharray: DASH_ARRAY,
+                strokeDashoffset: ANIMATED_DASH_OFFSET,
+                strokeLinecap: "round",
+                strokeWidth: 1
+              }}
+              stroke={"url(#linearGradient)"}
+              variants={outerLineVariants}
+            />
+          ))}
+        </motion.g>
+      </motion.svg>
+    </>
   )
 }
 

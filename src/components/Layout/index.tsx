@@ -14,6 +14,7 @@ import {
 import { FaLinkedin, FaTwitch, FaTwitter } from "react-icons/fa"
 import { GoMarkGithub } from "react-icons/go"
 import { Helmet } from "react-helmet"
+import MetatronsCube from "../MetatronsCube"
 import avatar from "../../assets/images/photo.jpg"
 import styles from "./styles.module.scss"
 
@@ -45,57 +46,29 @@ const Layout = (props: any): any => {
           </Helmet>
           <Box
             d="flex"
-            flexDirection="column-reverse"
             position="relative"
             w="100%"
             h="100vh"
             overflowY="hidden"
             backgroundColor="gray.800"
           >
-            {/* TODO: Setup navigation */}
-            {/* <Box
-              p={4}
-              position="absolute"
-              top="0"
-              right="0"
-              left="0"
-              zIndex="docked"
-            >
-              <Flex justify="space-between" align="center">
-                <Link to="/">
-                  <Avatar size="md" src={fry} />
-                </Link>
-                <Flex>
-                  <IconButton
-                    aria-label="Toggle Dark Mode"
-                    icon="moon"
-                    variant={isLightMode ? "ghost" : "solid"}
-                    variantColor="blue"
-                    onClick={toggleColorMode}
-                  />
-                  <Box mr="4">
-                    <Link to="/about">About</Link>
-                  </Box>
-                  <Box>
-                    <Link to="/blog">Blog</Link>
-                  </Box>
-                </Flex>
-              </Flex>
-            </Box> */}
             <Box
-              d="flex"
+              d={["none", "flex"]}
               flexDirection="column"
               justifyContent="space-between"
               alignItems="center"
               position="relative"
-              w="100%"
+              w={["100%", "40%"]}
               h="100%"
               p="12"
               backgroundColor="gray.700"
               borderTop="4px"
               borderColor="blue.300"
             >
-              <Box my="12" w="50%">
+              <Box position="relative" w="100%" h="100%" maxH="482px">
+                <MetatronsCube />
+              </Box>
+              <Box my="12">
                 <Box>
                   <Stack isInline spacing={4} d="flex" alignItems="center">
                     <Avatar size="lg" src={avatar} border="1px" />
