@@ -15,7 +15,8 @@
     "fix": "prettier --write 'src/**/*.{ts,tsx,scss,md}' && eslint --fix 'src/**/*.{ts,tsx}' && stylelint --fix 'src/**/*.scss' ",
     "buildScssTypings": "node scripts/generateTypings.js",
     "generate": "plop --plopfile ./generators/plopfile.js",
-    "graphql-types": "graphql-codegen --config ./graphql-config.yml"
+    "graphql-types": "graphql-codegen --config ./graphql-config.yml",
+    "deploy": "gatsby build && gh-pages -d public -b master"
   },
   "devDependencies": {
     "@types/react": "^16.8.23",

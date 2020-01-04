@@ -112,18 +112,19 @@ const Layout = (props: any): any => {
                     mt="4"
                     lineHeight="shorter"
                   >
-                    I am a{" "}
+                    I am a seasoned{" "}
                     <a href="https://blog.pragmaticengineer.com/the-product-minded-engineer/">
                       <Text as="ins" color="blue.300">
                         product engineer
                       </Text>
                     </a>{" "}
-                    with a passion for building engaging experiences for users
-                    on the web. I enjoy collaborating with product, user
-                    experience, and development teams in a startup environment.
-                    I have a passion for high-functioning, cross-disciplinary
-                    teams that focus on an agile, user-centered discovery
-                    process where collaboration and growth are the core values.
+                    with a passion for innovating and building engaging
+                    experiences for users on the web. I enjoy collaborating with
+                    product, user experience, and development teams to create
+                    engaging products and experiences. I thrive working in
+                    high-functioning, cross-disciplinary teams that focus on an
+                    agile, user-centered discovery process where collaboration
+                    and growth are the core values.
                   </Text>
                 </Box>
                 <Stack isInline mt="12">
