@@ -47,106 +47,122 @@ const Layout = (props: any): any => {
           <Box
             d="flex"
             position="relative"
-            w="100%"
+            w="100vw"
             h="100vh"
-            overflowY="hidden"
+            overflowX="hidden"
+            overflowY={["hidden", "auto"]}
             backgroundColor="gray.800"
           >
             <Box
-              d={["none", "flex"]}
+              d="flex"
               flexDirection="column"
               justifyContent="space-between"
               alignItems="center"
               position="relative"
-              w={["100%", "40%"]}
+              w={["100%", "600px", "40%"]}
               h="100%"
-              p="12"
+              p={["4", "12"]}
               backgroundColor="gray.700"
-              borderTop="4px"
-              borderColor="blue.300"
             >
-              <Box position="relative" w="100%" h="100%" maxH="482px">
+              <Box
+                d={["none", "block"]}
+                position="relative"
+                w="100%"
+                h="100%"
+                maxH="482px"
+              >
                 <MetatronsCube />
               </Box>
-              <Box my="12">
-                <Box>
-                  <Stack isInline spacing={4} d="flex" alignItems="center">
-                    <Avatar size="lg" src={avatar} border="1px" />
-                    <Heading as="h1" fontSize="6xl" color="teal.100">
-                      Rob Abby
-                    </Heading>
-                  </Stack>
-                  <Heading as="h2" fontSize="3xl" mt={5} color="gray.300">
-                    UI/UX &amp; Product Professional
+              <Box
+                my={["0", "12"]}
+                ml={["0", "6"]}
+                p={["4", "0"]}
+                w={["100vw", "100%"]}
+              >
+                <Stack isInline spacing={4} d="flex" alignItems="center">
+                  <Avatar size="lg" src={avatar} border="1px" />
+                  <Heading as="h1" fontSize="6xl" color="teal.100">
+                    Rob Abby
                   </Heading>
-                  <Text
-                    color="gray.300"
-                    fontSize="xl"
-                    mt="4"
-                    lineHeight="shorter"
-                  >
-                    I am a seasoned{" "}
-                    <a href="https://blog.pragmaticengineer.com/the-product-minded-engineer/">
-                      <Text as="ins" color="blue.300">
-                        product engineer
-                      </Text>
-                    </a>{" "}
-                    with a passion for innovating and building engaging
-                    experiences for users on the web. I enjoy collaborating with
-                    product, user experience, and development teams to create
-                    engaging products and experiences. I thrive working in
-                    high-functioning, cross-disciplinary teams that focus on an
-                    agile, user-centered discovery process where collaboration
-                    and growth are the core values.
-                  </Text>
-                </Box>
-                <Stack isInline mt="12">
-                  <Button
-                    leftIcon={GoMarkGithub}
-                    color="gray.50"
-                    cursor="pointer"
-                    onClick={() =>
-                      (window.location = "https://github.com/robabby")
-                    }
-                  >
-                    GitHub
-                  </Button>
-                  <Button
-                    leftIcon={FaLinkedin}
-                    color="gray.50"
-                    cursor="pointer"
-                    onClick={() =>
-                      (window.location = "https://www.linkedin.com/in/robabby/")
-                    }
-                  >
-                    LinkedIn
-                  </Button>
-                  <Button
-                    leftIcon={FaTwitter}
-                    color="gray.50"
-                    cursor="pointer"
-                    onClick={() =>
-                      (window.location = "https://twitter.com/robabby83")
-                    }
-                  >
-                    Twitter
-                  </Button>
-                  <Button
-                    leftIcon={FaTwitch}
-                    color="gray.50"
-                    cursor="pointer"
-                    onClick={() =>
-                      (window.location = "https://www.twitch.tv/bliss_83")
-                    }
-                  >
-                    Twitch
-                  </Button>
                 </Stack>
+                <Heading as="h2" fontSize="3xl" mt={5} color="gray.300">
+                  UI/UX &amp; Product Professional
+                </Heading>
+                <Text
+                  color="gray.300"
+                  fontSize="xl"
+                  mt="4"
+                  lineHeight="shorter"
+                >
+                  I am a seasoned{" "}
+                  <a href="https://blog.pragmaticengineer.com/the-product-minded-engineer/">
+                    <Text as="ins" color="blue.300">
+                      product engineer
+                    </Text>
+                  </a>{" "}
+                  with a passion for innovating and building engaging
+                  experiences for users on the web. I enjoy collaborating with
+                  product, user experience, and development teams to create
+                  engaging products and experiences. I thrive working in
+                  high-functioning, cross-disciplinary teams that focus on an
+                  agile, user-centered discovery process where collaboration and
+                  growth are the core values.
+                </Text>
+              </Box>
+              <Box
+                d="flex"
+                w={["100%", "auto"]}
+                flexDir={["column", "row"]}
+                justifyContent={["center"]}
+              >
+                <Button
+                  leftIcon={GoMarkGithub}
+                  mb={["2", "0"]}
+                  color="gray.50"
+                  cursor="pointer"
+                  onClick={() =>
+                    (window.location = "https://github.com/robabby")
+                  }
+                >
+                  GitHub
+                </Button>
+                <Button
+                  leftIcon={FaLinkedin}
+                  mb={["2", "0"]}
+                  color="gray.50"
+                  cursor="pointer"
+                  onClick={() =>
+                    (window.location = "https://www.linkedin.com/in/robabby/")
+                  }
+                >
+                  LinkedIn
+                </Button>
+                <Button
+                  leftIcon={FaTwitter}
+                  mb={["2", "0"]}
+                  color="gray.50"
+                  cursor="pointer"
+                  onClick={() =>
+                    (window.location = "https://twitter.com/robabby83")
+                  }
+                >
+                  Twitter
+                </Button>
+                <Button
+                  leftIcon={FaTwitch}
+                  color="gray.50"
+                  cursor="pointer"
+                  onClick={() =>
+                    (window.location = "https://www.twitch.tv/bliss_83")
+                  }
+                >
+                  Twitch
+                </Button>
               </Box>
             </Box>
-            <Box mx="auto" w="100%" h="100%" zIndex="base">
-              {props.children}
-            </Box>
+          </Box>
+          <Box d={["none", "block"]} mx="auto" w="100%" h="100%" zIndex="base">
+            {props.children}
           </Box>
         </div>
       </ColorModeProvider>
