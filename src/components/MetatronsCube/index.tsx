@@ -1,41 +1,135 @@
 import * as React from "react"
-import { motion, useMotionValue, useTransform } from "framer-motion"
-import styles from "./styles.module.scss"
+import { motion, useAnimation } from "framer-motion"
 
-const { useState } = React
+const { useState, useEffect } = React
 
+const INNER_LINES = [
+  "M 262.5 53.5 A 47 47 0 1 1  168.5,53.5 A 47 47 0 1 1  262.5 53.5 z",
+  "M 426.5 147.5 A 47 47 0 1 1  332.5,147.5 A 47 47 0 1 1  426.5 147.5 z",
+  "M 426.5 335.5 A 47 47 0 1 1  332.5,335.5 A 47 47 0 1 1  426.5 335.5 z",
+  "M 262.5 429.5 A 47 47 0 1 1  168.5,429.5 A 47 47 0 1 1  262.5 429.5 z",
+  "M 98.5 335.5 A 47 47 0 1 1  4.5,335.5 A 47 47 0 1 1  98.5 335.5 z",
+  "M 98.5 147.5 A 47 47 0 1 1  4.5,147.5 A 47 47 0 1 1  98.5 147.5 z",
+  "M 262.5 147.5 A 47 47 0 1 1  168.5,147.5 A 47 47 0 1 1  262.5 147.5 z",
+  "M 344.5 194.5 A 47 47 0 1 1  250.5,194.5 A 47 47 0 1 1  344.5 194.5 z",
+  "M 344.5 288.5 A 47 47 0 1 1  250.5,288.5 A 47 47 0 1 1  344.5 288.5 z",
+  "M 262.5 335.5 A 47 47 0 1 1  168.5,335.5 A 47 47 0 1 1  262.5 335.5 z",
+  "M 180.5 288.5 A 47 47 0 1 1  86.5,288.5 A 47 47 0 1 1  180.5 288.5 z",
+  "M 180.5 194.5 A 47 47 0 1 1  86.5,194.5 A 47 47 0 1 1  180.5 194.5 z",
+  "M 262.5 241.5 A 47 47 0 1 1  168.5,241.5 A 47 47 0 1 1  262.5 241.5 z"
+]
+const OUTER_LINES = [
+  "M 215.5,53.5 L 379.5,147.5 L 379.5,335.5 L 215.5,429.5 L 51.5,335.5 L 51.5,147.5 L 215.5,53.5 z",
+  "M 215.5,53.5 L 51.5,335.5 L 379.5,335.5 L 215.5,53.5 z ",
+  "M 51.5,147.5 L 215.5,429.5 L 379.5,147.5 L 51.5,147.5 z ",
+  "M 215.5,147.5 L 133.5,194.5 L 133.5,288.5 L 215.5,335.5 L 297.5,288.5 L 297.5,194.5 L 215.5,147.5 z ",
+  "M 133.5,288.5 L 215.5,53.5 L 297.5,288.5 L 133.5,288.5 z ",
+  "M 215.5,429.5 L 133.5,194.5 L 297.5,194.5 L 215.5,429.5 z ",
+  "M 51.5,147.5 L 379.5,335.5",
+  "M 51.5,335.5 L 379.5,147.5",
+  "M 215.5,53.5 L 215.5,429.5",
+  "M 51.5,335.5 L 215.5,147.5 L 297.5,288.5 L 51.5,335.5 z ",
+  "M 379.5,335.5 L 215.5,147.5 L 133.5,288.5 L 379.5,335.5 z ",
+  "M 379.5,147.5 L 133.5,194.5 L 215.5,335.5 L 379.5,147.5 z ",
+  "M 51.5,147.5 L 215.5,335.5 L 297.5,194.5 L 51.5,147.5 z "
+]
+const DASH_ARRAY = 2000
+const ANIMATED_DASH_OFFSET = 2000
 const COLORS = {
-  ltGrey: "#ddd",
-  pink: "#FF008C" 
+  pink: "rgb(244, 181, 248)",
+  blue1: "rgba(144, 205, 244, .75)",
+  blue2: "rgba(144, 205, 244, .25)"
 }
 
-const outerLineVariants = {
-  hover: { scale: 1.05, pathLength: 1 },
-  pressed: (isChecked: boolean) => ({ scale: isChecked ? 1.05 : 0.85 }),
-  checked: { stroke: COLORS.pink, pathLength: 1 },
-  unchecked: { pathLength: 1 }
+interface Props {
+  className?: string
 }
 
-const outerGroupVariants = {
-  checked: { rotate: [-360, -360, -180, -180, 0, 0], scale: [1, .9, .85, .85, 1.05, 1] },
-  unchecked: { rotate: [0, 0, -180, -180, -360, -360], scale: [1, 1.05, .85, .85, 1] }
-}
-
-const innerVariants = {
-  hover: { scale: 1, strokeWidth: 2, rotate: [0, 270, 360] },
-  pressed: (isChecked: boolean) => ({ scale: 0.95, strokeWidth: 2 }),
-  checked: { stroke: COLORS.pink },
-  unchecked: { stroke: COLORS.ltGrey, strokeWidth: 1 }
-}
-
-const MetatronsCube = (props): any => {
+const MetatronsCube = ({ className }: Props): any => {
   const [isChecked, setIsChecked] = useState(false)
-  const pathLength = useMotionValue(0)
-  const opacity = useTransform(pathLength, [0.05, 0.15], [0, 1])
+  const lineControls = useAnimation()
+  const gradientControls = useAnimation()
+  const rotateControls = useAnimation()
+
+  const innerSequence = async () => {
+    await lineControls.start(i => ({
+      opacity: 1,
+      transition: {
+        ease: "easeInOut",
+        duration: 0.7,
+        delay: i * 0.1
+      }
+    }))
+  }
+
+  const outerSequence = async () => {
+    await lineControls.start({
+      strokeDashoffset: 0,
+      transition: {
+        delay: 1.5,
+        ease: "easeInOut",
+        duration: 2
+      }
+    })
+  }
+
+  const gradientSequence = async () => {
+    await gradientControls.start({
+      stopColor: [COLORS.blue1, COLORS.pink, COLORS.blue2],
+      transitionEnd: {
+        stopColor: COLORS.blue2
+      },
+      transition: {
+        delay: 1.5,
+        ease: "easeInOut",
+        duration: 3.5
+      }
+    })
+  }
+
+  // TODO: Setup rotation sequence
+  // const rotationSequence = async () => {
+  //   await rotateControls.start({
+  //     rotate: 360,
+  //     transition: {
+  //       type: "spring",
+  //       damping: 50,
+  //       ease: "easeInOut",
+  //       duration: 0.75
+  //       // delay: 0.1
+  //     }
+  //   })
+  // }
+
+  const innerVariants = {
+    hover: { strokeWidth: 1.25 },
+    pressed: { strokeWidth: 1.5 },
+    checked: { stroke: "url(#linearGradient)" },
+    unchecked: { strokeWidth: 1 }
+  }
+
+  const outerLineVariants = {
+    hover: { scale: 1.05 },
+    pressed: { scale: 0.85 },
+    checked: {}
+    // unchecked: { pathLength: 1 }
+  }
+
+  useEffect(() => {
+    const innerTimer = setTimeout(innerSequence, 250)
+    const outerTimer = setTimeout(outerSequence, 250)
+    const gradientTimer = setTimeout(gradientSequence, 250)
+
+    return () => {
+      clearTimeout(outerTimer)
+      clearTimeout(innerTimer)
+      clearTimeout(gradientTimer)
+    }
+  }, [])
 
   return (
     <motion.svg
-      className={styles.container}
+      className={className}
       initial={false}
       animate={isChecked ? "checked" : "unchecked"}
       whileHover="hover"
@@ -44,178 +138,64 @@ const MetatronsCube = (props): any => {
       height="482"
       onClick={() => setIsChecked(!isChecked)}
     >
+      <defs>
+        <motion.linearGradient
+          id="linearGradient"
+          x1="50%"
+          x2="50%"
+          y1="0%"
+          y2="100%"
+        >
+          <motion.stop
+            animate={gradientControls}
+            offset="0%"
+            stopColor={COLORS.pink}
+          />
+          <motion.stop
+            animate={gradientControls}
+            offset="100%"
+            stopColor={COLORS.blue}
+          />
+        </motion.linearGradient>
+      </defs>
       <motion.g>
-        <motion.path
-          d="M 262.5 241.5 A 47 47 0 1 1  168.5,241.5 A 47 47 0 1 1  262.5 241.5 z"
-          fill="transparent"
-          stroke="#FF008C"
-          variants={innerVariants}
-        />
-        <motion.path
-          d="M 262.5 335.5 A 47 47 0 1 1  168.5,335.5 A 47 47 0 1 1  262.5 335.5 z"
-          fill="transparent"
-          stroke="#FF008C"
-          variants={innerVariants}
-        />
-        <motion.path
-          d="M 262.5 147.5 A 47 47 0 1 1  168.5,147.5 A 47 47 0 1 1  262.5 147.5 z"
-          fill="transparent"
-          stroke="#FF008C"
-          variants={innerVariants}
-        />
-        <motion.path
-          d="M 180.5 194.5 A 47 47 0 1 1  86.5,194.5 A 47 47 0 1 1  180.5 194.5 z"
-          fill="transparent"
-          stroke="#FF008C"
-          variants={innerVariants}
-        />
-        <motion.path
-          d="M 344.5 194.5 A 47 47 0 1 1  250.5,194.5 A 47 47 0 1 1  344.5 194.5 z"
-          fill="transparent"
-          stroke="#FF008C"
-          variants={innerVariants}
-        />
-        <motion.path
-          d="M 180.5 288.5 A 47 47 0 1 1  86.5,288.5 A 47 47 0 1 1  180.5 288.5 z"
-          fill="transparent"
-          stroke="#FF008C"
-          variants={innerVariants}
-        />
-        <motion.path
-          d="M 344.5 288.5 A 47 47 0 1 1  250.5,288.5 A 47 47 0 1 1  344.5 288.5 z"
-          fill="transparent"
-          stroke="#FF008C"
-          variants={innerVariants}
-        />
-        <motion.path
-          d="M 262.5 429.5 A 47 47 0 1 1  168.5,429.5 A 47 47 0 1 1  262.5 429.5 z"
-          fill="transparent"
-          stroke="#FF008C"
-          variants={innerVariants}
-        />
-        <motion.path
-          d="M 262.5 53.5 A 47 47 0 1 1  168.5,53.5 A 47 47 0 1 1  262.5 53.5 z"
-          fill="transparent"
-          stroke="#FF008C"
-          variants={innerVariants}
-        />
-        <motion.path
-          d="M 98.5 147.5 A 47 47 0 1 1  4.5,147.5 A 47 47 0 1 1  98.5 147.5 z"
-          fill="transparent"
-          stroke="#FF008C"
-          variants={innerVariants}
-        />
-        <motion.path
-          d="M 426.5 147.5 A 47 47 0 1 1  332.5,147.5 A 47 47 0 1 1  426.5 147.5 z"
-          fill="transparent"
-          stroke="#FF008C"
-          variants={innerVariants}
-        />
-        <motion.path
-          d="M 98.5 335.5 A 47 47 0 1 1  4.5,335.5 A 47 47 0 1 1  98.5 335.5 z"
-          fill="transparent"
-          stroke="#FF008C"
-          variants={innerVariants}
-        />
-        <motion.path
-          d="M 426.5 335.5 A 47 47 0 1 1  332.5,335.5 A 47 47 0 1 1  426.5 335.5 z"
-          fill="transparent"
-          stroke="#FF008C"
-          variants={innerVariants}
-        />
+        {INNER_LINES.map((def, i) => (
+          <motion.path
+            key={def}
+            d={def}
+            animate={lineControls}
+            custom={i}
+            fill="transparent"
+            initial={{
+              opacity: 0,
+              strokeWidth: 1,
+              strokeDasharray: DASH_ARRAY,
+              strokeDashoffset: 0,
+              strokeLinecap: "round"
+            }}
+            stroke={"url(#linearGradient)"}
+            variants={innerVariants}
+          />
+        ))}
       </motion.g>
-      <motion.g variants={outerGroupVariants} transition={{ duration: .5 }}>
-        <motion.path
-          d="M 215.5,53.5 L 379.5,147.5 L 379.5,335.5 L 215.5,429.5 L 51.5,335.5 L 51.5,147.5 L 215.5,53.5 z"
-          fill="transparent"
-          stroke={COLORS.ltGrey}
-          // style={{ pathLength, opacity }}
-          variants={outerLineVariants}
-        />
-        <motion.path
-          d="M 215.5,53.5 L 51.5,335.5 L 379.5,335.5 L 215.5,53.5 z "
-          fill="transparent"
-          stroke={COLORS.ltGrey}
-          // style={{ pathLength, opacity }}
-          variants={outerLineVariants}
-        />
-        <motion.path
-          d="M 51.5,147.5 L 215.5,429.5 L 379.5,147.5 L 51.5,147.5 z "
-          fill="transparent"
-          stroke={COLORS.ltGrey}
-          // style={{ pathLength, opacity }}
-          variants={outerLineVariants}
-        />
-        <motion.path
-          d="M 215.5,147.5 L 133.5,194.5 L 133.5,288.5 L 215.5,335.5 L 297.5,288.5 L 297.5,194.5 L 215.5,147.5 z "
-          fill="transparent"
-          stroke={COLORS.ltGrey}
-          // style={{ pathLength, opacity }}
-          variants={outerLineVariants}
-        />
-        <motion.path
-          d="M 133.5,288.5 L 215.5,53.5 L 297.5,288.5 L 133.5,288.5 z "
-          fill="transparent"
-          stroke={COLORS.ltGrey}
-          // style={{ pathLength, opacity }}
-          variants={outerLineVariants}
-        />
-        <motion.path
-          d="M 215.5,429.5 L 133.5,194.5 L 297.5,194.5 L 215.5,429.5 z "
-          fill="transparent"
-          stroke={COLORS.ltGrey}
-          // style={{ pathLength, opacity }}
-          variants={outerLineVariants}
-        />
-        <motion.path
-          d="M 51.5,147.5 L 379.5,335.5"
-          fill="transparent"
-          stroke={COLORS.ltGrey}
-          // style={{ pathLength, opacity }}
-          variants={outerLineVariants}
-        />
-        <motion.path
-          d="M 51.5,335.5 L 379.5,147.5"
-          fill="transparent"
-          stroke={COLORS.ltGrey}
-          // style={{ pathLength, opacity }}
-          variants={outerLineVariants}
-        />
-        <motion.path
-          d="M 215.5,53.5 L 215.5,429.5"
-          fill="transparent"
-          stroke={COLORS.ltGrey}
-          // style={{ pathLength, opacity }}
-          variants={outerLineVariants}
-        />
-        <motion.path
-          d="M 51.5,335.5 L 215.5,147.5 L 297.5,288.5 L 51.5,335.5 z "
-          fill="transparent"
-          stroke={COLORS.ltGrey}
-          // style={{ pathLength, opacity }}
-          variants={outerLineVariants}
-        />
-        <motion.path
-          d="M 379.5,335.5 L 215.5,147.5 L 133.5,288.5 L 379.5,335.5 z "
-          fill="transparent"
-          stroke={COLORS.ltGrey}
-          // style={{ pathLength, opacity }}
-          variants={outerLineVariants}
-        />
-        <motion.path
-          d="M 379.5,147.5 L 133.5,194.5 L 215.5,335.5 L 379.5,147.5 z "
-          fill="transparent"
-          stroke={COLORS.ltGrey}
-          // style={{ pathLength, opacity }}
-          variants={outerLineVariants}
-        />
-        <motion.path
-          d="M 51.5,147.5 L 215.5,335.5 L 297.5,194.5 L 51.5,147.5 z "
-          fill="transparent"
-          stroke={COLORS.ltGrey}
-          // style={{ pathLength, opacity }}
-          variants={outerLineVariants}
-        />
+      <motion.g>
+        {OUTER_LINES.map(def => (
+          <motion.path
+            key={def}
+            d={def}
+            animate={lineControls}
+            fill="transparent"
+            initial={{
+              opacity: 1,
+              strokeDasharray: DASH_ARRAY,
+              strokeDashoffset: ANIMATED_DASH_OFFSET,
+              strokeLinecap: "round",
+              strokeWidth: 1
+            }}
+            stroke={"url(#linearGradient)"}
+            variants={outerLineVariants}
+          />
+        ))}
       </motion.g>
     </motion.svg>
   )

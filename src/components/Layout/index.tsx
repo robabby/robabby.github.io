@@ -1,18 +1,20 @@
-// import "prismjs/themes/prism-okaidia.css"
 import * as React from "react"
 import {
   Avatar,
   Box,
+  Button,
   ColorModeProvider,
-  Flex,
-  IconButton,
+  Heading,
+  Stack,
+  Text,
   ThemeProvider,
-  theme,
-  useColorMode
+  theme
+  // useColorMode
 } from "@chakra-ui/core"
+import { FaLinkedin, FaTwitch, FaTwitter } from "react-icons/fa"
+import { GoMarkGithub } from "react-icons/go"
 import { Helmet } from "react-helmet"
-import { Link } from "gatsby"
-import fry from "../../assets/images/fry.jpg"
+import avatar from "../../assets/images/photo.jpg"
 import styles from "./styles.module.scss"
 
 const { useEffect } = React
@@ -26,8 +28,8 @@ export interface LayoutProps {
 
 const Layout = (props: any): any => {
   // TODO: Setup Color Mode
-  const { colorMode, toggleColorMode } = useColorMode()
-  const isLightMode = colorMode === "light"
+  // const { colorMode, toggleColorMode } = useColorMode()
+  // const isLightMode = colorMode === "light"
 
   useEffect(() => {
     console.log(theme)
@@ -42,13 +44,16 @@ const Layout = (props: any): any => {
             <title>Rob Abby</title>
           </Helmet>
           <Box
+            d="flex"
+            flexDirection="column-reverse"
             position="relative"
             w="100%"
             h="100vh"
             overflowY="hidden"
-            backgroundColor="gray.700"
+            backgroundColor="gray.800"
           >
-            <Box
+            {/* TODO: Setup navigation */}
+            {/* <Box
               p={4}
               position="absolute"
               top="0"
@@ -68,15 +73,102 @@ const Layout = (props: any): any => {
                     variantColor="blue"
                     onClick={toggleColorMode}
                   />
-                  {/* TODO: Setup navigation */}
-                  {/* <Box mr="4">
+                  <Box mr="4">
                     <Link to="/about">About</Link>
                   </Box>
                   <Box>
                     <Link to="/blog">Blog</Link>
-                  </Box> */}
+                  </Box>
                 </Flex>
               </Flex>
+            </Box> */}
+            <Box
+              d="flex"
+              flexDirection="column"
+              justifyContent="space-between"
+              alignItems="center"
+              position="relative"
+              w="100%"
+              h="100%"
+              p="12"
+              backgroundColor="gray.700"
+              borderTop="4px"
+              borderColor="blue.300"
+            >
+              <Box my="12" w="50%">
+                <Box>
+                  <Stack isInline spacing={4} d="flex" alignItems="center">
+                    <Avatar size="lg" src={avatar} border="1px" />
+                    <Heading as="h1" fontSize="6xl" color="teal.100">
+                      Rob Abby
+                    </Heading>
+                  </Stack>
+                  <Heading as="h2" fontSize="3xl" mt={5} color="gray.300">
+                    UI/UX &amp; Product Professional
+                  </Heading>
+                  <Text
+                    color="gray.300"
+                    fontSize="xl"
+                    mt="4"
+                    lineHeight="shorter"
+                  >
+                    I am a{" "}
+                    <a href="https://blog.pragmaticengineer.com/the-product-minded-engineer/">
+                      <Text as="ins" color="blue.300">
+                        product engineer
+                      </Text>
+                    </a>{" "}
+                    with a passion for building engaging experiences for users
+                    on the web. I enjoy collaborating with product, user
+                    experience, and development teams in a startup environment.
+                    I have a passion for high-functioning, cross-disciplinary
+                    teams that focus on an agile, user-centered discovery
+                    process where collaboration and growth are the core values.
+                  </Text>
+                </Box>
+                <Stack isInline mt="12">
+                  <Button
+                    leftIcon={GoMarkGithub}
+                    color="gray.50"
+                    cursor="pointer"
+                    onClick={() =>
+                      (window.location = "https://github.com/robabby")
+                    }
+                  >
+                    GitHub
+                  </Button>
+                  <Button
+                    leftIcon={FaLinkedin}
+                    color="gray.50"
+                    cursor="pointer"
+                    onClick={() =>
+                      (window.location = "https://www.linkedin.com/in/robabby/")
+                    }
+                  >
+                    LinkedIn
+                  </Button>
+                  <Button
+                    leftIcon={FaTwitter}
+                    color="gray.50"
+                    cursor="pointer"
+                    onClick={() =>
+                      (window.location = "https://twitter.com/robabby83")
+                    }
+                  >
+                    Twitter
+                  </Button>
+                  <Button
+                    leftIcon={FaTwitch}
+                    color="gray.50"
+                    cursor="pointer"
+                    onClick={() =>
+                      (window.location = "https://www.twitch.tv/bliss_83")
+                    }
+                  >
+                    Twitch
+                  </Button>
+                </Stack>
+              </Box>
             </Box>
             <Box mx="auto" w="100%" h="100%" zIndex="base">
               {props.children}
