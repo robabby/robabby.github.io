@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{NLiy:function(e,a,n){e.exports={skyCanvas:"index-module--skyCanvas--QQ1Wz",skyWrapper:"index-module--skyWrapper--26dNg",cubeWrapper:"index-module--cubeWrapper--1WIup",cubeCanvas:"index-module--cubeCanvas--mNXII",cube:"index-module--cube--2HqNY",avatar:"index-module--avatar--g0HOK"}},giH8:function(e,a,n){e.exports={wrapper:"styles-module--wrapper--260DV"}},lMw3:function(e,a,n){e.exports={layout:"styles-module--layout--2IDnm"}}}]);
-//# sourceMappingURL=styles-16496be0937103459208.js.map
