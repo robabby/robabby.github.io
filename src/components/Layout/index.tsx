@@ -110,6 +110,7 @@ const Layout = (props: any): any => {
             justifyContent="space-between"
           >
             <Button
+              variantColor="gray"
               leftIcon={GoMarkGithub}
               mb={{ base: 2, md: 0 }}
               color="gray.50"
@@ -119,6 +120,7 @@ const Layout = (props: any): any => {
               GitHub
             </Button>
             <Button
+              variantColor="gray"
               leftIcon={FaLinkedin}
               mb={{ base: 2, md: 0 }}
               color="gray.50"
@@ -130,6 +132,7 @@ const Layout = (props: any): any => {
               LinkedIn
             </Button>
             <Button
+              variantColor="gray"
               leftIcon={FaTwitter}
               mb={{ base: 2, md: 0 }}
               color="gray.50"
@@ -141,6 +144,7 @@ const Layout = (props: any): any => {
               Twitter
             </Button>
             <Button
+              variantColor="gray"
               leftIcon={FaTwitch}
               color="gray.50"
               cursor="pointer"
