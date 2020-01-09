@@ -1,4 +1,4 @@
-.cubeWrapper {
+.metatronWrapper {
   position: absolute;
   top: 0;
   right: 0;
@@ -9,7 +9,7 @@
   z-index: 0;
 }
 
-.cubeCanvas {
+.metatronCanvas {
   position: absolute;
   top: 0;
   right: 0;
@@ -17,10 +17,18 @@
   left: 0;
 }
 
-.cube {
+.metatron {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   z-index: 2;
+}
+
+.cube {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 3;
 }

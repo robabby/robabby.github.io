@@ -33,12 +33,16 @@ module.exports = {
          * @property {boolean} [isResettingCSS=true]
          * if false, this plugin will not use `<CSSReset />
          *
-         * isResettingCSS: true,
+         * isResettingCSS: true
          *
          * @property {boolean} [isUsingColorMode=true]
          * if false, this plugin will not use <ColorModeProvider />
+         *
+         * isUsingColorMode: true
+         *
          */
-        isUsingColorMode: true,
+        isResettingCSS: true,
+        isUsingColorMode: true
       },
     },
     {
