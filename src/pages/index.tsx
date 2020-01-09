@@ -1,6 +1,9 @@
 /* eslint-disable @typescript-eslint/camelcase */
 import * as React from "react"
-import { Box } from "@chakra-ui/core"
+import { Box, Heading, IconButton, Text } from "@chakra-ui/core"
+import { FaLinkedin, FaTwitch, FaTwitter } from "react-icons/fa"
+import { GoMarkGithub } from "react-icons/go"
+import MetatronsCube from "../components/MetatronsCube"
 import Particles from "react-particles-js"
 import styles from "./index.module.scss"
 import { withLayout } from "../components/Layout"
@@ -52,6 +55,88 @@ const IndexPage = (): any => {
           retina_detect: true
         }}
       />
+      <Box
+        d="flex"
+        justifyContent="space-around"
+        alignItems="center"
+        position="relative"
+        zIndex="docked"
+      >
+        <Box d="flex" flexDirection="column" w="40%">
+          <Box w={["100vw", "100%"]}>
+            <Heading as="h1" fontSize="4xl" mt={5} color="gray.300">
+              UI/UX &amp; Product Professional
+            </Heading>
+            <Text color="gray.300" fontSize="xl" mt="4" lineHeight="shorter">
+              I am a seasoned{" "}
+              <a href="https://blog.pragmaticengineer.com/the-product-minded-engineer/">
+                <Text as="ins" color="blue.300">
+                  product engineer
+                </Text>
+              </a>{" "}
+              with a passion for innovating and building engaging experiences
+              for users on the web. I enjoy collaborating with product, user
+              experience, and development teams to create engaging products and
+              experiences. I thrive working in high-functioning,
+              cross-disciplinary teams that focus on an agile, user-centered
+              discovery process where collaboration and growth are the core
+              values.
+            </Text>
+          </Box>
+          <Box d="flex" w="100%" flexDirection="row" mt="6">
+            <a href="https://github.com/robabby">
+              <IconButton
+                variantColor="messenger"
+                color="white"
+                aria-label="GitHub"
+                icon={GoMarkGithub}
+                mr="4"
+                cursor="pointer"
+              >
+                GitHub
+              </IconButton>
+            </a>
+            <a href="https://www.linkedin.com/in/robabby/">
+              <IconButton
+                variantColor="messenger"
+                color="white"
+                aria-label="LinkedIn"
+                icon={FaLinkedin}
+                mr="4"
+                cursor="pointer"
+              >
+                LinkedIn
+              </IconButton>
+            </a>
+            <a href="https://twitter.com/robabby83">
+              <IconButton
+                variantColor="messenger"
+                color="white"
+                aria-label="Twitter"
+                icon={FaTwitter}
+                mr="4"
+                cursor="pointer"
+              >
+                Twitter
+              </IconButton>
+            </a>
+            <a href="https://www.twitch.tv/bliss_83">
+              <IconButton
+                variantColor="messenger"
+                color="white"
+                aria-label="Twitch"
+                icon={FaTwitch}
+                cursor="pointer"
+              >
+                Twitch
+              </IconButton>
+            </a>
+          </Box>
+        </Box>
+        <Box d="block" position="relative" w="40%" h="100%">
+          <MetatronsCube />
+        </Box>
+      </Box>
     </Box>
   )
 }

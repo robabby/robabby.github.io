@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/camelcase */
 import * as React from "react"
 import { motion, useAnimation } from "framer-motion"
-import { Box } from "@chakra-ui/core"
-import Cube from "./Cube"
+// import { Box } from "@chakra-ui/core"
+// import Cube from "./Cube"
 import Particles from "react-particles-js"
 import styles from "./styles.module.scss"
 import svg from "../../assets/images/cube.svg"
@@ -85,6 +85,20 @@ const MetatronsCube = (): any => {
         delay: 1.5,
         ease: "easeInOut",
         duration: 3.5
+      }
+    })
+
+    await gradientControls.start({
+      stopColor: [COLORS.blue1, COLORS.blue2, COLORS.blue1, COLORS.blue2],
+      transitionEnd: {
+        stopColor: COLORS.blue2
+      },
+      transition: {
+        delay: 1.5,
+        ease: "easeInOut",
+        duration: 2.25,
+        loop: Infinity,
+        repeatDelay: 5
       }
     })
   }
@@ -267,9 +281,9 @@ const MetatronsCube = (): any => {
           ))}
         </motion.g>
       </motion.svg>
-      <Box className={styles.cube}>
+      {/* <Box className={styles.cube}>
         <Cube depth={120} repeatDelay={5000} continuous />
-      </Box>
+      </Box> */}
     </>
   )
 }
