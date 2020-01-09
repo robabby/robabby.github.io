@@ -111,6 +111,8 @@ const Layout = (props: any): any => {
           >
             <a href="https://github.com/robabby">
               <IconButton
+                variantColor="messenger"
+                color="white"
                 aria-label="GitHub"
                 icon={GoMarkGithub}
                 mb={{ base: 2, md: 0 }}
@@ -121,6 +123,8 @@ const Layout = (props: any): any => {
             </a>
             <a href="https://www.linkedin.com/in/robabby/">
               <IconButton
+                variantColor="messenger"
+                color="white"
                 aria-label="LinkedIn"
                 icon={FaLinkedin}
                 mb={{ base: 2, md: 0 }}
@@ -131,6 +135,8 @@ const Layout = (props: any): any => {
             </a>
             <a href="https://twitter.com/robabby83">
               <IconButton
+                variantColor="messenger"
+                color="white"
                 aria-label="Twitter"
                 icon={FaTwitter}
                 mb={{ base: 2, md: 0 }}
@@ -140,7 +146,13 @@ const Layout = (props: any): any => {
               </IconButton>
             </a>
             <a href="https://www.twitch.tv/bliss_83">
-              <IconButton aria-label="Twitch" icon={FaTwitch} cursor="pointer">
+              <IconButton
+                variantColor="messenger"
+                color="white"
+                aria-label="Twitch"
+                icon={FaTwitch}
+                cursor="pointer"
+              >
                 Twitch
               </IconButton>
             </a>

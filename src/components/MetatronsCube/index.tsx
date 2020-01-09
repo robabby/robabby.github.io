@@ -44,7 +44,7 @@ const ANIMATED_DASH_OFFSET = 2000
 const COLORS = {
   pink: "rgb(244, 181, 248)",
   blue1: "rgba(144, 205, 244, .75)",
-  blue2: "rgba(144, 205, 244, .25)"
+  blue2: "rgba(144, 205, 244, .10)"
 }
 
 const MetatronsCube = (): any => {

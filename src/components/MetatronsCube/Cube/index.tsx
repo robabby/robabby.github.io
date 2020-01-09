@@ -9,7 +9,8 @@ export default class Cube extends React.Component<any> {
     hover: false,
     theme: "dark",
     depth: 30,
-    repeatDelay: 1000
+    repeatDelay: 1000,
+    continuous: true
   }
 
   state = {
