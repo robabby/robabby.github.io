@@ -2,7 +2,7 @@ import * as React from "react"
 import {
   Avatar,
   Box,
-  Button,
+  IconButton,
   ColorModeProvider,
   Heading,
   Stack,
@@ -107,58 +107,48 @@ const Layout = (props: any): any => {
             d="flex"
             w="100%"
             flexDirection={{ base: "column", md: "row" }}
-            justifyContent="space-between"
+            justifyContent="space-around"
           >
-            <Button
-              variantColor="gray"
-              leftIcon={GoMarkGithub}
-              mb={{ base: 2, md: 0 }}
-              color="gray.50"
-              cursor="pointer"
-              onClick={() => (window.location = "https://github.com/robabby")}
-            >
-              GitHub
-            </Button>
-            <Button
-              variantColor="gray"
-              leftIcon={FaLinkedin}
-              mb={{ base: 2, md: 0 }}
-              color="gray.50"
-              cursor="pointer"
-              onClick={() =>
-                (window.location = "https://www.linkedin.com/in/robabby/")
-              }
-            >
-              LinkedIn
-            </Button>
-            <Button
-              variantColor="gray"
-              leftIcon={FaTwitter}
-              mb={{ base: 2, md: 0 }}
-              color="gray.50"
-              cursor="pointer"
-              onClick={() =>
-                (window.location = "https://twitter.com/robabby83")
-              }
-            >
-              Twitter
-            </Button>
-            <Button
-              variantColor="gray"
-              leftIcon={FaTwitch}
-              color="gray.50"
-              cursor="pointer"
-              onClick={() =>
-                (window.location = "https://www.twitch.tv/bliss_83")
-              }
-            >
-              Twitch
-            </Button>
+            <a href="https://github.com/robabby">
+              <IconButton
+                aria-label="GitHub"
+                icon={GoMarkGithub}
+                mb={{ base: 2, md: 0 }}
+                cursor="pointer"
+              >
+                GitHub
+              </IconButton>
+            </a>
+            <a href="https://www.linkedin.com/in/robabby/">
+              <IconButton
+                aria-label="LinkedIn"
+                icon={FaLinkedin}
+                mb={{ base: 2, md: 0 }}
+                cursor="pointer"
+              >
+                LinkedIn
+              </IconButton>
+            </a>
+            <a href="https://twitter.com/robabby83">
+              <IconButton
+                aria-label="Twitter"
+                icon={FaTwitter}
+                mb={{ base: 2, md: 0 }}
+                cursor="pointer"
+              >
+                Twitter
+              </IconButton>
+            </a>
+            <a href="https://www.twitch.tv/bliss_83">
+              <IconButton aria-label="Twitch" icon={FaTwitch} cursor="pointer">
+                Twitch
+              </IconButton>
+            </a>
           </Box>
         </Box>
-        <Box d={["none", "block"]} mx="auto" w="100%" h="100%" zIndex="base">
+        {/* <Box d={["none", "block"]} mx="auto" w="100%" h="100%" zIndex="base">
           {props.children}
-        </Box>
+        </Box> */}
       </Box>
     </div>
   )
