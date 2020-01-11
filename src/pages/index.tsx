@@ -71,7 +71,7 @@ const IndexPage = (props): any => {
           p={{ base: "4", lg: "2" }}
         >
           <AnimatePresence>
-            <Box key="text-container" w={"100%"} mt={{ base: "4", md: "0" }}>
+            <Box key="text-container" w={"100%"} mt={{ base: "2", md: "0" }}>
               <motion.div
                 key={"title"}
                 initial={{ x: -20, y: 0, opacity: 0 }}
