@@ -41,16 +41,25 @@ const OUTER_LINES = [
 const DASH_ARRAY = 2000
 const ANIMATED_DASH_OFFSET = 2000
 const COLORS = {
-  pink: "rgb(244, 181, 248)",
-  blue1: "rgba(144, 205, 244, .75)",
-  blue2: "rgba(144, 205, 244, .20)"
+  pink: "rgba(244, 181, 248, .5)",
+  blue1: "rgba(144, 205, 244, .5)",
+  blue2: "rgba(144, 205, 244, .25)"
 }
 
 const MetatronsCube = ({ delay = 0 }: any): any => {
   const [isReady, setIsReady] = useState(false)
   const [isChecked, setIsChecked] = useState(false)
   const lineControls = useAnimation()
-  const gradientControls = useAnimation()
+
+  const lineSequence = async () => {
+    await lineControls.start({
+      strokeDashoffset: 0,
+      transition: {
+        ease: "easeInOut",
+        duration: 2
+      }
+    })
+  }
 
   const circleSequence = async () => {
     await lineControls.start(i => ({
@@ -61,31 +70,8 @@ const MetatronsCube = ({ delay = 0 }: any): any => {
         delay: i * 0.1
       }
     }))
-  }
 
-  const lineSequence = async () => {
-    await lineControls.start({
-      strokeDashoffset: 0,
-      transition: {
-        delay: 1.5,
-        ease: "easeInOut",
-        duration: 2
-      }
-    })
-  }
-
-  const gradientSequence = async () => {
-    await gradientControls.start({
-      stopColor: [COLORS.blue1, COLORS.pink, COLORS.blue2],
-      transitionEnd: {
-        stopColor: COLORS.blue2
-      },
-      transition: {
-        delay: 1.5,
-        ease: "easeInOut",
-        duration: 3.5
-      }
-    })
+    lineSequence()
   }
 
   const circleVariants = {
@@ -106,17 +92,16 @@ const MetatronsCube = ({ delay = 0 }: any): any => {
     const mountTimer = setTimeout(() => {
       setIsReady(true)
     }, delay)
-    const innerTimer = setTimeout(circleSequence, delay + 2000)
-    const outerTimer = setTimeout(lineSequence, delay + 2000)
-    const gradientTimer = setTimeout(gradientSequence, delay + 2000)
 
-    return () => {
-      clearTimeout(outerTimer)
-      clearTimeout(innerTimer)
-      clearTimeout(gradientTimer)
-      clearTimeout(mountTimer)
+    if (isReady) {
+      const cirlceTimer = setTimeout(circleSequence, 750)
+
+      return () => {
+        clearTimeout(cirlceTimer)
+        clearTimeout(mountTimer)
+      }
     }
-  }, [])
+  }, [isReady])
 
   const renderContent = () => (
     <motion.div
@@ -124,18 +109,18 @@ const MetatronsCube = ({ delay = 0 }: any): any => {
       initial={{ x: 0, y: 20, opacity: 0, width: "100%", height: "100%" }}
       animate={{ y: 0, opacity: 1 }}
       exit={{ y: -20, opacity: 0 }}
-      transition={{ duration: 2 }}
+      transition={{ duration: 0.5 }}
     >
       <Particles
         className={styles.particles}
-        canvasClassName={styles.metatronCanvas}
+        canvasClassName={styles.canvas}
         params={{
           polygon: {
             enable: true,
             scale: 1.5,
             type: "inline",
             move: {
-              radius: 5,
+              radius: 2,
               type: "path"
             },
             url: svg,
@@ -149,7 +134,7 @@ const MetatronsCube = ({ delay = 0 }: any): any => {
               }
             }
           },
-          fps_limit: 28,
+          // fps_limit: 28,
           particles: {
             number: {
               value: 200,
@@ -163,7 +148,7 @@ const MetatronsCube = ({ delay = 0 }: any): any => {
               opacity: 0.25
             },
             move: {
-              speed: 1
+              speed: 0.25
             },
             opacity: {
               anim: {
@@ -211,14 +196,37 @@ const MetatronsCube = ({ delay = 0 }: any): any => {
             y2="100%"
           >
             <motion.stop
-              animate={gradientControls}
+              animate={{
+                stopColor: [
+                  COLORS.pink,
+                  COLORS.blue1,
+                  COLORS.pink,
+                  COLORS.blue2
+                ],
+                transitionEnd: {
+                  stopColor: COLORS.blue2
+                }
+              }}
               offset="0%"
               stopColor={COLORS.pink}
+              transition={{
+                ease: "easeInOut",
+                duration: 8
+              }}
             />
             <motion.stop
-              animate={gradientControls}
+              animate={{
+                stopColor: [COLORS.blue1, COLORS.pink, COLORS.blue2],
+                transitionEnd: {
+                  stopColor: COLORS.blue2
+                }
+              }}
               offset="100%"
               stopColor={COLORS.blue2}
+              transition={{
+                ease: "easeInOut",
+                duration: 8
+              }}
             />
           </motion.linearGradient>
         </motion.defs>

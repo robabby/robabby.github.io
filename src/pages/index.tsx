@@ -9,7 +9,6 @@ import Particles from "react-particles-js"
 import styles from "./index.module.scss"
 
 const IndexPage = (props): any => {
-  console.log(props)
   return (
     <Box d="flex" position="relative" w="100%" h="100%">
       <Particles
@@ -58,7 +57,7 @@ const IndexPage = (props): any => {
       />
       <Box
         d="flex"
-        flexDirection={{ base: "column-reverse", md: "row" }}
+        flexDirection={{ base: "column-reverse", lg: "row" }}
         justifyContent={"space-around"}
         alignItems="center"
         position="relative"
@@ -67,9 +66,9 @@ const IndexPage = (props): any => {
         <Box
           d="flex"
           flexDirection="column"
-          w={{ base: "100vw", md: "40%" }}
-          h={{ base: "100%", md: "auto" }}
-          p={{ base: "4", md: "2" }}
+          w={{ base: "100vw", lg: "40%" }}
+          h={{ base: "auto", lg: "auto" }}
+          p={{ base: "4", lg: "2" }}
         >
           <AnimatePresence>
             <Box key="text-container" w={"100%"} mt={{ base: "4", md: "0" }}>
@@ -82,7 +81,7 @@ const IndexPage = (props): any => {
               >
                 <Heading
                   as="h1"
-                  fontSize={{ base: "4xl", xl: "5xl" }}
+                  fontSize={{ base: "3xl", xl: "5xl" }}
                   color="gray.300"
                 >
                   UI/UX &amp; Product Professional
@@ -205,8 +204,8 @@ const IndexPage = (props): any => {
         <Box
           d={{ base: "none", md: "block" }}
           position="relative"
-          w="40%"
-          h="100%"
+          w={{ base: "100%", lg: "40%" }}
+          h={{ base: "100%" }}
           overflowY="hidden"
           zIndex="docked"
         >
