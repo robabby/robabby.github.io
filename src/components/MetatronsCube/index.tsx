@@ -50,6 +50,38 @@ const MetatronsCube = ({ delay = 0 }: any): any => {
   const [isReady, setIsReady] = useState(false)
   const [isChecked, setIsChecked] = useState(false)
   const lineControls = useAnimation()
+  const rotateCirclesControls = useAnimation()
+  const rotateLinesControls = useAnimation()
+
+  const rotateCirclesSequence = async () => {
+    rotateCirclesControls.start({
+      rotate: 180,
+      transition: {
+        type: "tween",
+        stiffness: 50,
+        damping: 3,
+        ease: "anticipate",
+        duration: 4,
+        loop: Infinity,
+        repeatDelay: 4
+      }
+    })
+  }
+
+  const rotateLinesSequence = async () => {
+    rotateLinesControls.start({
+      rotate: -180,
+      transition: {
+        type: "tween",
+        stiffness: 50,
+        damping: 5,
+        ease: "anticipate",
+        duration: 4,
+        loop: Infinity,
+        repeatDelay: 4
+      }
+    })
+  }
 
   const lineSequence = async () => {
     await lineControls.start({
@@ -59,6 +91,11 @@ const MetatronsCube = ({ delay = 0 }: any): any => {
         duration: 2
       }
     })
+
+    setTimeout(() => {
+      rotateCirclesSequence()
+      rotateLinesSequence()
+    }, 5000)
   }
 
   const circleSequence = async () => {
@@ -81,12 +118,12 @@ const MetatronsCube = ({ delay = 0 }: any): any => {
     unchecked: { strokeWidth: 1 }
   }
 
-  const lineGroupVariants = {
-    hover: { scale: 1.02 },
-    pressed: { scale: 0.95 },
-    checked: { rotate: 360 },
-    unchecked: { rotate: 0 }
-  }
+  // const lineGroupVariants = {
+  //   hover: { scale: 1.02 },
+  //   pressed: { scale: 0.95 },
+  //   checked: { rotate: 360 },
+  //   unchecked: { rotate: 0 }
+  // }
 
   useEffect(() => {
     const mountTimer = setTimeout(() => {
@@ -94,7 +131,7 @@ const MetatronsCube = ({ delay = 0 }: any): any => {
     }, delay)
 
     if (isReady) {
-      const cirlceTimer = setTimeout(circleSequence, 750)
+      const cirlceTimer = setTimeout(circleSequence, 1500)
 
       return () => {
         clearTimeout(cirlceTimer)
@@ -109,7 +146,7 @@ const MetatronsCube = ({ delay = 0 }: any): any => {
       initial={{ x: 0, y: 20, opacity: 0, width: "100%", height: "100%" }}
       animate={{ y: 0, opacity: 1 }}
       exit={{ y: -20, opacity: 0 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 1.25, ease: "easeInOut" }}
     >
       <Particles
         className={styles.particles}
@@ -119,10 +156,10 @@ const MetatronsCube = ({ delay = 0 }: any): any => {
             enable: true,
             scale: 1.5,
             type: "inline",
-            move: {
-              radius: 2,
-              type: "path"
-            },
+            // move: {
+            //   radius: 2,
+            //   type: "path"
+            // },
             url: svg,
             inline: {
               arrangement: "equidistant"
@@ -137,7 +174,7 @@ const MetatronsCube = ({ delay = 0 }: any): any => {
           // fps_limit: 28,
           particles: {
             number: {
-              value: 200,
+              value: 100,
               density: {
                 enable: false
               }
@@ -158,20 +195,6 @@ const MetatronsCube = ({ delay = 0 }: any): any => {
                 sync: false
               },
               value: 0.4
-            }
-          },
-          interactivity: {
-            events: {
-              onhover: {
-                enable: false,
-                mode: "bubble"
-              }
-            },
-            modes: {
-              bubble: {
-                size: 6,
-                distance: 40
-              }
             }
           },
           retina_detect: true
@@ -230,7 +253,7 @@ const MetatronsCube = ({ delay = 0 }: any): any => {
             />
           </motion.linearGradient>
         </motion.defs>
-        <motion.g>
+        <motion.g initial={{ rotate: 0 }} animate={rotateCirclesControls}>
           {CIRCLES.map((def, i) => (
             <motion.path
               key={def}
@@ -250,11 +273,7 @@ const MetatronsCube = ({ delay = 0 }: any): any => {
             />
           ))}
         </motion.g>
-        <motion.g
-          initial={{ rotate: 0 }}
-          variants={lineGroupVariants}
-          transition={{ type: "spring", damping: 15 }}
-        >
+        <motion.g initial={{ rotate: 0 }} animate={rotateLinesControls}>
           {OUTER_LINES.map(def => (
             <motion.path
               key={def}
