@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/camelcase */
 import * as React from "react"
-import { motion, useAnimation } from "framer-motion"
+import { AnimatePresence, motion, useAnimation } from "framer-motion"
 import { Box } from "@chakra-ui/core"
 // import Cube from "./Cube"
 import Particles from "react-particles-js"
@@ -9,7 +9,7 @@ import svg from "../../assets/images/cube.svg"
 
 const { useState, useEffect } = React
 
-const INNER_LINES = [
+const CIRCLES = [
   "M 262.5 53.5 A 47 47 0 1 1  168.5,53.5 A 47 47 0 1 1  262.5 53.5 z",
   "M 426.5 147.5 A 47 47 0 1 1  332.5,147.5 A 47 47 0 1 1  426.5 147.5 z",
   "M 426.5 335.5 A 47 47 0 1 1  332.5,335.5 A 47 47 0 1 1  426.5 335.5 z",
@@ -47,10 +47,12 @@ const COLORS = {
   blue2: "rgba(144, 205, 244, .20)"
 }
 
-const MetatronsCube = (): any => {
+const MetatronsCube = ({ delay = 0 }): any => {
+  const [isReady, setIsReady] = useState(false)
   const [isChecked, setIsChecked] = useState(false)
   const lineControls = useAnimation()
   const gradientControls = useAnimation()
+  const rotateControls = useAnimation()
 
   const circleSequence = async () => {
     await lineControls.start(i => ({
@@ -88,36 +90,46 @@ const MetatronsCube = (): any => {
     })
   }
 
-  const innerVariants = {
+  const circleVariants = {
     hover: { strokeWidth: 1.25 },
     pressed: { strokeWidth: 1.5 },
     checked: { stroke: "url(#linearGradient)" },
     unchecked: { strokeWidth: 1 }
   }
 
-  const outerLineVariants = {
+  const lineGroupVariants = {
     hover: { scale: 1.02 },
     pressed: { scale: 0.95 },
-    checked: {}
-    // unchecked: { pathLength: 1 }
+    checked: { rotate: 360 },
+    unchecked: { rotate: 0 }
   }
 
   useEffect(() => {
-    const innerTimer = setTimeout(circleSequence, 250)
-    const outerTimer = setTimeout(lineSequence, 250)
-    const gradientTimer = setTimeout(gradientSequence, 250)
+    const mountTimer = setTimeout(() => {
+      setIsReady(true)
+    }, delay)
+    const innerTimer = setTimeout(circleSequence, delay + 2000)
+    const outerTimer = setTimeout(lineSequence, delay + 2000)
+    const gradientTimer = setTimeout(gradientSequence, delay + 2000)
 
     return () => {
       clearTimeout(outerTimer)
       clearTimeout(innerTimer)
       clearTimeout(gradientTimer)
+      clearTimeout(mountTimer)
     }
   }, [])
 
-  return (
-    <Box>
+  const renderContent = () => (
+    <motion.div
+      key="container"
+      initial={{ x: 0, y: 20, opacity: 0, width: "100%", height: "100%" }}
+      animate={{ y: 0, opacity: 1 }}
+      exit={{ y: -20, opacity: 0 }}
+      transition={{ duration: 2 }}
+    >
       <Particles
-        className={styles.metatronWrapper}
+        className={styles.particles}
         canvasClassName={styles.metatronCanvas}
         params={{
           polygon: {
@@ -185,9 +197,9 @@ const MetatronsCube = (): any => {
       <motion.svg
         className={styles.metatron}
         initial={false}
-        animate={isChecked ? "checked" : "unchecked"}
         whileHover="hover"
         whileTap="pressed"
+        animate={isChecked ? "checked" : "unchecked"}
         width="435"
         height="482"
         onClick={() => setIsChecked(!isChecked)}
@@ -213,7 +225,7 @@ const MetatronsCube = (): any => {
           </motion.linearGradient>
         </motion.defs>
         <motion.g>
-          {INNER_LINES.map((def, i) => (
+          {CIRCLES.map((def, i) => (
             <motion.path
               key={def}
               d={def}
@@ -228,11 +240,15 @@ const MetatronsCube = (): any => {
                 strokeLinecap: "round"
               }}
               stroke={"url(#linearGradient)"}
-              variants={innerVariants}
+              variants={circleVariants}
             />
           ))}
         </motion.g>
-        <motion.g>
+        <motion.g
+          initial={{ rotate: 0 }}
+          variants={lineGroupVariants}
+          transition={{ type: "spring", damping: 15 }}
+        >
           {OUTER_LINES.map(def => (
             <motion.path
               key={def}
@@ -247,15 +263,20 @@ const MetatronsCube = (): any => {
                 strokeWidth: 1
               }}
               stroke={"url(#linearGradient)"}
-              variants={outerLineVariants}
             />
           ))}
         </motion.g>
       </motion.svg>
       {/* <Box className={styles.cube}>
-        <Cube depth={120} repeatDelay={5000} continuous />
-      </Box> */}
-    </Box>
+          <Cube depth={120} repeatDelay={5000} continuous />
+        </Box> */}
+    </motion.div>
+  )
+
+  return (
+    <AnimatePresence initial={false}>
+      {isReady && renderContent()}
+    </AnimatePresence>
   )
 }
 

@@ -6,9 +6,9 @@ import { GoMarkGithub } from "react-icons/go"
 import MetatronsCube from "../components/MetatronsCube"
 import Particles from "react-particles-js"
 import styles from "./index.module.scss"
-import { withLayout } from "../components/Layout"
 
-const IndexPage = (): any => {
+const IndexPage = (props): any => {
+  console.log(props)
   return (
     <Box d="flex" position="relative" w="100%" h="100%">
       <Particles
@@ -154,13 +154,14 @@ const IndexPage = (): any => {
           position="relative"
           w="40%"
           h="100%"
+          overflowY="hidden"
           zIndex="docked"
         >
-          <MetatronsCube />
+          <MetatronsCube delay={250} />
         </Box>
       </Box>
     </Box>
   )
 }
 
-export default withLayout(IndexPage)
+export default IndexPage

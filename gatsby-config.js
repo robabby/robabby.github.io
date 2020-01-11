@@ -13,7 +13,12 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-transformer-json',
-    'gatsby-plugin-transition-link',
+    {
+      resolve: 'gatsby-plugin-transition-link',
+      options: {
+          layout: require.resolve(`./src/components/Layout/index.tsx`)
+        }
+    },
     {
       resolve: 'gatsby-plugin-sass',
       options: {
