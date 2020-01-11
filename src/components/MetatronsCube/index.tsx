@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/camelcase */
 import * as React from "react"
 import { AnimatePresence, motion, useAnimation } from "framer-motion"
-import { Box } from "@chakra-ui/core"
 // import Cube from "./Cube"
 import Particles from "react-particles-js"
 import styles from "./styles.module.scss"
@@ -47,12 +46,11 @@ const COLORS = {
   blue2: "rgba(144, 205, 244, .20)"
 }
 
-const MetatronsCube = ({ delay = 0 }): any => {
+const MetatronsCube = ({ delay = 0 }: any): any => {
   const [isReady, setIsReady] = useState(false)
   const [isChecked, setIsChecked] = useState(false)
   const lineControls = useAnimation()
   const gradientControls = useAnimation()
-  const rotateControls = useAnimation()
 
   const circleSequence = async () => {
     await lineControls.start(i => ({
@@ -147,7 +145,7 @@ const MetatronsCube = ({ delay = 0 }): any => {
             draw: {
               enable: true,
               stroke: {
-                color: "rgba(255, 255, 255, .2)"
+                color: "rgba(255, 255, 255, .25)"
               }
             }
           },

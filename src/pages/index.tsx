@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/camelcase */
 import * as React from "react"
+import { AnimatePresence, motion } from "framer-motion"
 import { Box, Heading, IconButton, Text } from "@chakra-ui/core"
 import { FaLinkedin, FaTwitch, FaTwitter } from "react-icons/fa"
 import { GoMarkGithub } from "react-icons/go"
@@ -70,84 +71,136 @@ const IndexPage = (props): any => {
           h={{ base: "100%", md: "auto" }}
           p={{ base: "4", md: "2" }}
         >
-          <Box w={"100%"} mt={{ base: "4", md: "0" }}>
-            <Heading
-              as="h1"
-              fontSize={{ base: "4xl", xl: "5xl" }}
-              color="gray.300"
-            >
-              UI/UX &amp; Product Professional
-            </Heading>
-            <Text
-              color="gray.300"
-              fontSize={{ base: "xl", xl: "2xl" }}
-              mt="4"
-              lineHeight="shorter"
-            >
-              I am a seasoned{" "}
-              <a href="https://blog.pragmaticengineer.com/the-product-minded-engineer/">
-                <Text as="ins" color="blue.300">
-                  product engineer
+          <AnimatePresence>
+            <Box key="text-container" w={"100%"} mt={{ base: "4", md: "0" }}>
+              <motion.div
+                key={"title"}
+                initial={{ x: -20, y: 0, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: 20, opacity: 0 }}
+                transition={{ duration: 1 }}
+              >
+                <Heading
+                  as="h1"
+                  fontSize={{ base: "4xl", xl: "5xl" }}
+                  color="gray.300"
+                >
+                  UI/UX &amp; Product Professional
+                </Heading>
+              </motion.div>
+              <motion.div
+                key={"description"}
+                initial={{ x: -20, y: 0, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: 20, opacity: 0 }}
+                transition={{ duration: 1, delay: 1 }}
+              >
+                <Text
+                  color="gray.300"
+                  fontSize={{ base: "xl", xl: "2xl" }}
+                  mt="4"
+                  lineHeight="shorter"
+                >
+                  I am a seasoned{" "}
+                  <a href="https://blog.pragmaticengineer.com/the-product-minded-engineer/">
+                    <Text as="ins" color="blue.300">
+                      product engineer
+                    </Text>
+                  </a>{" "}
+                  with a passion for innovating and building engaging
+                  experiences for users on the web. I enjoy collaborating with
+                  product, user experience, and development teams to create
+                  engaging products and experiences. I thrive working in
+                  high-functioning, cross-disciplinary teams that focus on an
+                  agile, user-centered discovery process where collaboration and
+                  growth are the core values.
                 </Text>
-              </a>{" "}
-              with a passion for innovating and building engaging experiences
-              for users on the web. I enjoy collaborating with product, user
-              experience, and development teams to create engaging products and
-              experiences. I thrive working in high-functioning,
-              cross-disciplinary teams that focus on an agile, user-centered
-              discovery process where collaboration and growth are the core
-              values.
-            </Text>
-          </Box>
-          <Box d="flex" w="100%" flexDirection="row" mt="6">
-            <a href="https://github.com/robabby">
-              <IconButton
-                variantColor="messenger"
-                color="white"
-                aria-label="GitHub"
-                icon={GoMarkGithub}
-                mr="4"
-                cursor="pointer"
+              </motion.div>
+            </Box>
+            <Box
+              key="social-icons"
+              d="flex"
+              w="100%"
+              flexDirection="row"
+              mt="8"
+            >
+              <motion.a
+                key={"social-github"}
+                initial={{ x: 0, y: 10, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: -10, opacity: 0 }}
+                transition={{ duration: 0.5, delay: 2 }}
+                href="https://github.com/robabby"
               >
-                GitHub
-              </IconButton>
-            </a>
-            <a href="https://www.linkedin.com/in/robabby/">
-              <IconButton
-                variantColor="messenger"
-                color="white"
-                aria-label="LinkedIn"
-                icon={FaLinkedin}
-                mr="4"
-                cursor="pointer"
+                <IconButton
+                  variantColor="messenger"
+                  color="white"
+                  aria-label="GitHub"
+                  icon={GoMarkGithub}
+                  mr="4"
+                  cursor="pointer"
+                >
+                  GitHub
+                </IconButton>
+              </motion.a>
+              <motion.a
+                key={"social-linkedin"}
+                initial={{ x: 0, y: 10, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: -10, opacity: 0 }}
+                transition={{ duration: 0.5, delay: 2.25 }}
+                href="https://www.linkedin.com/in/robabby/"
               >
-                LinkedIn
-              </IconButton>
-            </a>
-            <a href="https://twitter.com/robabby83">
-              <IconButton
-                variantColor="messenger"
-                color="white"
-                aria-label="Twitter"
-                icon={FaTwitter}
-                mr="4"
-                cursor="pointer"
+                <IconButton
+                  variantColor="messenger"
+                  color="white"
+                  aria-label="LinkedIn"
+                  icon={FaLinkedin}
+                  mr="4"
+                  cursor="pointer"
+                >
+                  LinkedIn
+                </IconButton>
+              </motion.a>
+              <motion.a
+                key={"social-twitter"}
+                initial={{ x: 0, y: 10, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: -10, opacity: 0 }}
+                transition={{ duration: 0.5, delay: 2.5 }}
+                href="https://twitter.com/robabby83"
               >
-                Twitter
-              </IconButton>
-            </a>
-            <a href="https://www.twitch.tv/bliss_83">
-              <IconButton
-                variantColor="messenger"
-                color="white"
-                aria-label="Twitch"
-                icon={FaTwitch}
-                cursor="pointer"
+                <IconButton
+                  variantColor="messenger"
+                  color="white"
+                  aria-label="Twitter"
+                  icon={FaTwitter}
+                  mr="4"
+                  cursor="pointer"
+                >
+                  Twitter
+                </IconButton>
+              </motion.a>
+              <motion.a
+                key={"social-twitch"}
+                initial={{ x: 0, y: 10, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: -10, opacity: 0 }}
+                transition={{ duration: 0.5, delay: 2.75 }}
+                href="https://www.twitch.tv/bliss_83"
               >
-                Twitch
-              </IconButton>
-            </a>
-          </Box>
+                <IconButton
+                  variantColor="messenger"
+                  color="white"
+                  aria-label="Twitch"
+                  icon={FaTwitch}
+                  cursor="pointer"
+                >
+                  Twitch
+                </IconButton>
+              </motion.a>
+            </Box>
+          </AnimatePresence>
         </Box>
         <Box
           d={{ base: "none", md: "block" }}
@@ -157,7 +210,7 @@ const IndexPage = (props): any => {
           overflowY="hidden"
           zIndex="docked"
         >
-          <MetatronsCube delay={250} />
+          <MetatronsCube delay={3250} />
         </Box>
       </Box>
     </Box>
