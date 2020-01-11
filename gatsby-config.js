@@ -13,6 +13,7 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-transformer-json',
+    'gatsby-plugin-transition-link',
     {
       resolve: 'gatsby-plugin-sass',
       options: {

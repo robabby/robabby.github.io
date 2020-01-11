@@ -57,17 +57,33 @@ const IndexPage = (): any => {
       />
       <Box
         d="flex"
-        justifyContent="space-around"
+        flexDirection={{ base: "column-reverse", md: "row" }}
+        justifyContent={"space-around"}
         alignItems="center"
         position="relative"
         zIndex="docked"
       >
-        <Box d="flex" flexDirection="column" w="40%">
-          <Box w={["100vw", "100%"]}>
-            <Heading as="h1" fontSize="4xl" mt={5} color="gray.300">
+        <Box
+          d="flex"
+          flexDirection="column"
+          w={{ base: "100vw", md: "40%" }}
+          h={{ base: "100%", md: "auto" }}
+          p={{ base: "4", md: "2" }}
+        >
+          <Box w={"100%"} mt={{ base: "4", md: "0" }}>
+            <Heading
+              as="h1"
+              fontSize={{ base: "4xl", xl: "5xl" }}
+              color="gray.300"
+            >
               UI/UX &amp; Product Professional
             </Heading>
-            <Text color="gray.300" fontSize="xl" mt="4" lineHeight="shorter">
+            <Text
+              color="gray.300"
+              fontSize={{ base: "xl", xl: "2xl" }}
+              mt="4"
+              lineHeight="shorter"
+            >
               I am a seasoned{" "}
               <a href="https://blog.pragmaticengineer.com/the-product-minded-engineer/">
                 <Text as="ins" color="blue.300">
@@ -133,7 +149,13 @@ const IndexPage = (): any => {
             </a>
           </Box>
         </Box>
-        <Box d="block" position="relative" w="40%" h="100%">
+        <Box
+          d={{ base: "none", md: "block" }}
+          position="relative"
+          w="40%"
+          h="100%"
+          zIndex="docked"
+        >
           <MetatronsCube />
         </Box>
       </Box>

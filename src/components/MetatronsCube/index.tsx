@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/camelcase */
 import * as React from "react"
 import { motion, useAnimation } from "framer-motion"
-// import { Box } from "@chakra-ui/core"
+import { Box } from "@chakra-ui/core"
 // import Cube from "./Cube"
 import Particles from "react-particles-js"
 import styles from "./styles.module.scss"
@@ -44,16 +44,15 @@ const ANIMATED_DASH_OFFSET = 2000
 const COLORS = {
   pink: "rgb(244, 181, 248)",
   blue1: "rgba(144, 205, 244, .75)",
-  blue2: "rgba(144, 205, 244, .10)"
+  blue2: "rgba(144, 205, 244, .20)"
 }
 
 const MetatronsCube = (): any => {
   const [isChecked, setIsChecked] = useState(false)
   const lineControls = useAnimation()
   const gradientControls = useAnimation()
-  // const rotateControls = useAnimation()
 
-  const innerSequence = async () => {
+  const circleSequence = async () => {
     await lineControls.start(i => ({
       opacity: 1,
       transition: {
@@ -64,7 +63,7 @@ const MetatronsCube = (): any => {
     }))
   }
 
-  const outerSequence = async () => {
+  const lineSequence = async () => {
     await lineControls.start({
       strokeDashoffset: 0,
       transition: {
@@ -87,35 +86,7 @@ const MetatronsCube = (): any => {
         duration: 3.5
       }
     })
-
-    await gradientControls.start({
-      stopColor: [COLORS.blue1, COLORS.blue2, COLORS.blue1, COLORS.blue2],
-      transitionEnd: {
-        stopColor: COLORS.blue2
-      },
-      transition: {
-        delay: 1.5,
-        ease: "easeInOut",
-        duration: 2.25,
-        loop: Infinity,
-        repeatDelay: 5
-      }
-    })
   }
-
-  // TODO: Setup rotation sequence
-  // const rotationSequence = async () => {
-  //   await rotateControls.start({
-  //     rotate: 360,
-  //     transition: {
-  //       type: "spring",
-  //       damping: 50,
-  //       ease: "easeInOut",
-  //       duration: 0.75
-  //       // delay: 0.1
-  //     }
-  //   })
-  // }
 
   const innerVariants = {
     hover: { strokeWidth: 1.25 },
@@ -132,8 +103,8 @@ const MetatronsCube = (): any => {
   }
 
   useEffect(() => {
-    const innerTimer = setTimeout(innerSequence, 250)
-    const outerTimer = setTimeout(outerSequence, 250)
+    const innerTimer = setTimeout(circleSequence, 250)
+    const outerTimer = setTimeout(lineSequence, 250)
     const gradientTimer = setTimeout(gradientSequence, 250)
 
     return () => {
@@ -144,7 +115,7 @@ const MetatronsCube = (): any => {
   }, [])
 
   return (
-    <>
+    <Box>
       <Particles
         className={styles.metatronWrapper}
         canvasClassName={styles.metatronCanvas}
@@ -221,7 +192,7 @@ const MetatronsCube = (): any => {
         height="482"
         onClick={() => setIsChecked(!isChecked)}
       >
-        <defs>
+        <motion.defs>
           <motion.linearGradient
             id="linearGradient"
             x1="50%"
@@ -240,7 +211,7 @@ const MetatronsCube = (): any => {
               stopColor={COLORS.blue2}
             />
           </motion.linearGradient>
-        </defs>
+        </motion.defs>
         <motion.g>
           {INNER_LINES.map((def, i) => (
             <motion.path
@@ -284,7 +255,7 @@ const MetatronsCube = (): any => {
       {/* <Box className={styles.cube}>
         <Cube depth={120} repeatDelay={5000} continuous />
       </Box> */}
-    </>
+    </Box>
   )
 }
 
