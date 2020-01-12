@@ -58,7 +58,7 @@ const Layout = (props: any): any => {
             </AniLink>
           </Box>
           <Stack color="white" isInline spacing="4">
-            <Box>
+            {/* <Box>
               <AniLink
                 cover
                 bg={COVER_BACKGROUND}
@@ -81,7 +81,7 @@ const Layout = (props: any): any => {
                   Blog
                 </Text>
               </AniLink>
-            </Box>
+            </Box> */}
           </Stack>
         </Box>
         <Box
