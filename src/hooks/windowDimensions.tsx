@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 
+const WINDOW = typeof window !== "undefined" && window
 const BREAKPOINTS = {
   sm: 480,
   md: 768,
@@ -8,7 +9,7 @@ const BREAKPOINTS = {
 }
 
 function getWindowDimensions() {
-  const { innerWidth: width, innerHeight: height } = window
+  const { innerWidth: width, innerHeight: height } = WINDOW && WINDOW
   return {
     width,
     height,
@@ -29,8 +30,8 @@ export default function useWindowDimensions() {
       setWindowDimensions(getWindowDimensions())
     }
 
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
+    WINDOW.addEventListener("resize", handleResize)
+    return () => WINDOW.removeEventListener("resize", handleResize)
   }, [])
 
   return windowDimensions
