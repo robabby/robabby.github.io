@@ -1,10 +1,12 @@
 /* eslint-disable @typescript-eslint/camelcase */
 import * as React from "react"
 import { AnimatePresence, motion, useAnimation } from "framer-motion"
+import { Box, useTheme } from "@chakra-ui/core"
 // import Cube from "./Cube"
 import Particles from "react-particles-js"
 import styles from "./styles.module.scss"
 import svg from "../../assets/images/cube.svg"
+import windowDimensions from "../../hooks/windowDimensions"
 
 const { useState, useEffect } = React
 
@@ -52,6 +54,7 @@ const MetatronsCube = ({ delay = 0 }: any): any => {
   const lineControls = useAnimation()
   const rotateCirclesControls = useAnimation()
   const rotateLinesControls = useAnimation()
+  const { isMd } = windowDimensions()
 
   const rotateCirclesSequence = async () => {
     rotateCirclesControls.start({
@@ -148,58 +151,60 @@ const MetatronsCube = ({ delay = 0 }: any): any => {
       exit={{ y: -20, opacity: 0 }}
       transition={{ duration: 1.25, ease: "easeInOut" }}
     >
-      <Particles
-        className={styles.particles}
-        canvasClassName={styles.canvas}
-        params={{
-          polygon: {
-            enable: true,
-            scale: 1.5,
-            type: "inline",
-            // move: {
-            //   radius: 2,
-            //   type: "path"
-            // },
-            url: svg,
-            inline: {
-              arrangement: "equidistant"
-            },
-            draw: {
+      <Box d={{ base: "block", lg: "block" }}>
+        <Particles
+          className={styles.particles}
+          canvasClassName={styles.canvas}
+          params={{
+            polygon: {
               enable: true,
-              stroke: {
-                color: "rgba(255, 255, 255, .25)"
-              }
-            }
-          },
-          // fps_limit: 28,
-          particles: {
-            number: {
-              value: 100,
-              density: {
-                enable: false
-              }
-            },
-            line_linked: {
-              enable: true,
-              distance: 25,
-              opacity: 0.25
-            },
-            move: {
-              speed: 0.25
-            },
-            opacity: {
-              anim: {
-                enable: true,
-                opacity_min: 0.05,
-                speed: 2,
-                sync: false
+              scale: isMd ? 2 : 1.5,
+              type: "inline",
+              // move: {
+              //   radius: 2,
+              //   type: "path"
+              // },
+              url: svg,
+              inline: {
+                arrangement: "equidistant"
               },
-              value: 0.4
-            }
-          },
-          retina_detect: true
-        }}
-      />
+              draw: {
+                enable: true,
+                stroke: {
+                  color: "rgba(255, 255, 255, .25)"
+                }
+              }
+            },
+            // fps_limit: 28,
+            particles: {
+              number: {
+                value: 100,
+                density: {
+                  enable: false
+                }
+              },
+              line_linked: {
+                enable: true,
+                distance: 25,
+                opacity: 0.25
+              },
+              move: {
+                speed: 0.25
+              },
+              opacity: {
+                anim: {
+                  enable: true,
+                  opacity_min: 0.05,
+                  speed: 2,
+                  sync: false
+                },
+                value: 0.4
+              }
+            },
+            retina_detect: true
+          }}
+        />
+      </Box>
       <motion.svg
         className={styles.metatron}
         initial={false}

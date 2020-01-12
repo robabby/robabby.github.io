@@ -57,9 +57,9 @@ const IndexPage = (props): any => {
       />
       <Box
         d="flex"
-        flexDirection={{ base: "column-reverse", sm: "column", lg: "row" }}
-        justifyContent={"space-around"}
-        alignItems="center"
+        flexDirection={{ base: "column", md: "column-reverse", lg: "row" }}
+        justifyContent={{ base: "flex-start", md: "space-around" }}
+        alignItems={"center"}
         position="relative"
         zIndex="docked"
       >
