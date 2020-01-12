@@ -71,11 +71,7 @@ const IndexPage = (props): any => {
           p={{ base: "4", lg: "2" }}
         >
           <AnimatePresence>
-            <Box
-              key="text-container"
-              w={{ base: "100%", md: "40%", lg: "100%" }}
-              mt={{ base: "2", md: "0" }}
-            >
+            <Box key="text-container" w={"100%"} mt={{ base: "2", md: "0" }}>
               <motion.div
                 key={"title"}
                 initial={{ x: -20, y: 0, opacity: 0 }}
@@ -123,7 +119,7 @@ const IndexPage = (props): any => {
             <Box
               key="social-icons"
               d="flex"
-              w={{ base: "100%", md: "60%", lg: "100%" }}
+              w="100%"
               flexDirection="row"
               mt="8"
             >
@@ -208,7 +204,7 @@ const IndexPage = (props): any => {
         <Box
           d={{ base: "none", md: "block" }}
           position="relative"
-          w={{ base: "100%", lg: "40%" }}
+          w={{ base: "100%", lg: "50%" }}
           h={{ base: "100%" }}
           overflowY="hidden"
           zIndex="docked"

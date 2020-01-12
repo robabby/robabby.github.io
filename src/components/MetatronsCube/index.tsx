@@ -54,7 +54,9 @@ const MetatronsCube = ({ delay = 0 }: any): any => {
   const lineControls = useAnimation()
   const rotateCirclesControls = useAnimation()
   const rotateLinesControls = useAnimation()
-  const { isMd } = windowDimensions()
+  const { isSm, isMd, isLg, isXl } = windowDimensions()
+
+  console.log(isSm, isMd, isLg, isXl)
 
   const rotateCirclesSequence = async () => {
     rotateCirclesControls.start({
@@ -158,7 +160,7 @@ const MetatronsCube = ({ delay = 0 }: any): any => {
           params={{
             polygon: {
               enable: true,
-              scale: isMd ? 2 : 1.5,
+              scale: isMd || isLg ? 2 : 1.5,
               type: "inline",
               // move: {
               //   radius: 2,

@@ -13,10 +13,11 @@ function getWindowDimensions() {
   return {
     width,
     height,
-    isSm: width <= BREAKPOINTS.sm,
-    isMd: width > BREAKPOINTS.sm && width <= BREAKPOINTS.md,
-    isLg: width > BREAKPOINTS.md && width <= BREAKPOINTS.lg,
-    isXl: width > BREAKPOINTS.lg
+    isSm: width < BREAKPOINTS.md,
+    isMd: width >= BREAKPOINTS.md && width <= BREAKPOINTS.lg,
+    isMdAndUp: width >= BREAKPOINTS.md,
+    isLg: width >= BREAKPOINTS.lg && width <= BREAKPOINTS.xl,
+    isXl: width > BREAKPOINTS.xl
   }
 }
 
