@@ -208,6 +208,7 @@ const IndexPage = (): any => {
           position="relative"
           marginTop={{ base: "4", md: "0" }}
           w={{ base: "100%", lg: "50%" }}
+          minWidth={{ base: "100%", md: "435px" }}
           h={{ base: "100%" }}
           zIndex={customTheme.zIndices.docked}
         >

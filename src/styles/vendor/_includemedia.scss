@@ -30,9 +30,9 @@
 ///  $breakpoints: ('phone': 320px);
 ///
 $breakpoints: (
-  "phone": 320px,
+  "phone": 480px,
   "tablet": 768px,
-  "desktop": 1024px
+  "desktop": 992px
 ) !default;
 
 ///
@@ -235,7 +235,8 @@ $im-no-media-expressions: ("screen", "portrait", "landscape") !default;
       $value: get-expression-value($condition, $operator);
 
       @if ($prefix == "max" and $value <= $no-media-breakpoint-value) or
-        ($prefix == "min" and $value > $no-media-breakpoint-value) {
+        ($prefix == "min" and $value > $no-media-breakpoint-value)
+      {
         @return false;
       }
     } @else if not index($im-no-media-expressions, $condition) {
@@ -574,7 +575,8 @@ $im-no-media-expressions: ("screen", "portrait", "landscape") !default;
 ///
 @mixin media($conditions...) {
   @if ($im-media-support and length($conditions) == 0) or
-    (not $im-media-support and im-intercepts-static-breakpoint($conditions...)) {
+    (not $im-media-support and im-intercepts-static-breakpoint($conditions...))
+  {
     @content;
   } @else if ($im-media-support and length($conditions) > 0) {
     @media #{unquote(parse-expression(nth($conditions, 1)))} {

@@ -47,10 +47,6 @@ const COLORS = {
   blue1: "rgba(144, 205, 244, .5)",
   blue2: "rgba(144, 205, 244, .25)"
 }
-const DIMENSIONS = {
-  width: 435,
-  height: 482
-}
 
 const MetatronsCube = ({ delay = 0 }: any): any => {
   const [isReady, setIsReady] = useState(false)
@@ -162,7 +158,7 @@ const MetatronsCube = ({ delay = 0 }: any): any => {
           params={{
             polygon: {
               enable: true,
-              scale: isMdAndUp ? 1.6 : 1.3,
+              scale: isMdAndUp ? 1.5 : 1.3,
               type: "inline",
               // move: {
               //   radius: 2,
