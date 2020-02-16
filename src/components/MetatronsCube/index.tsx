@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/camelcase */
 import * as React from "react"
 import { AnimatePresence, motion, useAnimation } from "framer-motion"
-import { Box, useTheme } from "@chakra-ui/core"
+import { Box } from "@chakra-ui/core"
 // import Cube from "./Cube"
 import Particles from "react-particles-js"
 import styles from "./styles.module.scss"
@@ -26,10 +26,10 @@ const CIRCLES = [
   "M 262.5 241.5 A 47 47 0 1 1  168.5,241.5 A 47 47 0 1 1  262.5 241.5 z"
 ]
 const OUTER_LINES = [
-  "M 215.5,53.5 L 379.5,147.5 L 379.5,335.5 L 215.5,429.5 L 51.5,335.5 L 51.5,147.5 L 215.5,53.5 z",
-  "M 215.5,53.5 L 51.5,335.5 L 379.5,335.5 L 215.5,53.5 z ",
-  "M 51.5,147.5 L 215.5,429.5 L 379.5,147.5 L 51.5,147.5 z ",
-  "M 215.5,147.5 L 133.5,194.5 L 133.5,288.5 L 215.5,335.5 L 297.5,288.5 L 297.5,194.5 L 215.5,147.5 z ",
+  "M 215.5,53.5 L 379.5,147.5 L 379.5,335.5 L 215.5,429.5 L 51.5,335.5 L 51.5,147.5 L 215.5,53.5 z", // Outer Hexagon
+  "M 215.5,53.5 L 51.5,335.5 L 379.5,335.5 L 215.5,53.5 z ", // Triagle Up
+  "M 51.5,147.5 L 215.5,429.5 L 379.5,147.5 L 51.5,147.5 z ", // Triangle Down
+  "M 215.5,147.5 L 133.5,194.5 L 133.5,288.5 L 215.5,335.5 L 297.5,288.5 L 297.5,194.5 L 215.5,147.5 z ", // Inner Hexagon
   "M 133.5,288.5 L 215.5,53.5 L 297.5,288.5 L 133.5,288.5 z ",
   "M 215.5,429.5 L 133.5,194.5 L 297.5,194.5 L 215.5,429.5 z ",
   "M 51.5,147.5 L 379.5,335.5",
@@ -54,9 +54,7 @@ const MetatronsCube = ({ delay = 0 }: any): any => {
   const lineControls = useAnimation()
   const rotateCirclesControls = useAnimation()
   const rotateLinesControls = useAnimation()
-  const { isSm, isMd, isLg, isXl } = windowDimensions()
-
-  console.log(isSm, isMd, isLg, isXl)
+  const { isMdAndUp } = windowDimensions()
 
   const rotateCirclesSequence = async () => {
     rotateCirclesControls.start({
@@ -75,7 +73,7 @@ const MetatronsCube = ({ delay = 0 }: any): any => {
 
   const rotateLinesSequence = async () => {
     rotateLinesControls.start({
-      rotate: -180,
+      rotate: 360,
       transition: {
         type: "tween",
         stiffness: 50,
@@ -160,7 +158,7 @@ const MetatronsCube = ({ delay = 0 }: any): any => {
           params={{
             polygon: {
               enable: true,
-              scale: isMd || isLg ? 2 : 1.5,
+              scale: isMdAndUp ? 2 : 1.5,
               type: "inline",
               // move: {
               //   radius: 2,
