@@ -16,6 +16,8 @@
     "buildScssTypings": "node scripts/generateTypings.js",
     "generate": "plop --plopfile ./generators/plopfile.js",
     "graphql-types": "graphql-codegen --config ./graphql-config.yml",
+    "dev": "gatsby dev",
+    "serve": "gatsby serve -p 9000 -o",
     "clean": "gatsby clean",
     "deploy": "gatsby clean && gatsby build && gh-pages -d public -b master"
   },
