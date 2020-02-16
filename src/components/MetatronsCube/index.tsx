@@ -47,6 +47,10 @@ const COLORS = {
   blue1: "rgba(144, 205, 244, .5)",
   blue2: "rgba(144, 205, 244, .25)"
 }
+const DIMENSIONS = {
+  width: 435,
+  height: 482
+}
 
 const MetatronsCube = ({ delay = 0 }: any): any => {
   const [isReady, setIsReady] = useState(false)
@@ -158,7 +162,7 @@ const MetatronsCube = ({ delay = 0 }: any): any => {
           params={{
             polygon: {
               enable: true,
-              scale: isMdAndUp ? 2 : 1.5,
+              scale: isMdAndUp ? 1.6 : 1.3,
               type: "inline",
               // move: {
               //   radius: 2,
@@ -178,7 +182,7 @@ const MetatronsCube = ({ delay = 0 }: any): any => {
             // fps_limit: 28,
             particles: {
               number: {
-                value: 100,
+                value: isMdAndUp ? 100 : 35,
                 density: {
                   enable: false
                 }
@@ -211,8 +215,7 @@ const MetatronsCube = ({ delay = 0 }: any): any => {
         whileHover="hover"
         whileTap="pressed"
         animate={isChecked ? "checked" : "unchecked"}
-        width="435"
-        height="482"
+        viewBox="0 0 435 482"
         onClick={() => setIsChecked(!isChecked)}
       >
         <motion.defs>

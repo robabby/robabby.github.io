@@ -2,13 +2,14 @@
 import * as React from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { Box, Heading, IconButton, Text } from "@chakra-ui/core"
-import { FaLinkedin, FaTwitch, FaTwitter } from "react-icons/fa"
+import { FaLinkedin, FaTwitter } from "react-icons/fa"
 import { GoMarkGithub } from "react-icons/go"
 import MetatronsCube from "../components/MetatronsCube"
 import Particles from "react-particles-js"
+import customTheme from "../components/Layout/theme"
 import styles from "./index.module.scss"
 
-const IndexPage = (props): any => {
+const IndexPage = (): any => {
   return (
     <Box d="flex" position="relative" w="100%" h="100%">
       <Particles
@@ -57,17 +58,18 @@ const IndexPage = (props): any => {
       />
       <Box
         d="flex"
-        flexDirection={{ base: "column", md: "column-reverse", lg: "row" }}
+        flexDirection={{ base: "column-reverse", lg: "row" }}
         justifyContent={{ base: "flex-start", md: "space-around" }}
         alignItems={"center"}
+        overflow="hidden"
         position="relative"
-        zIndex="docked"
+        zIndex={customTheme.zIndices.docked}
       >
         <Box
           d="flex"
           flexDirection="column"
           w={{ base: "100vw", lg: "40%" }}
-          h={{ base: "auto", lg: "auto" }}
+          h={{ base: "100%", lg: "auto" }}
           p={{ base: "4", lg: "2" }}
         >
           <AnimatePresence>
@@ -96,7 +98,7 @@ const IndexPage = (props): any => {
               >
                 <Text
                   color="gray.300"
-                  fontSize={{ base: "xl", xl: "2xl" }}
+                  fontSize={{ base: "lg", xl: "2xl" }}
                   mt="4"
                   lineHeight="shorter"
                 >
@@ -181,19 +183,19 @@ const IndexPage = (props): any => {
                 </IconButton>
               </motion.a>
               <motion.a
-                key={"social-twitch"}
+                key={"social-mixer"}
                 initial={{ x: 0, y: 10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: -10, opacity: 0 }}
                 transition={{ duration: 0.5, delay: 2.75 }}
-                href="https://www.twitch.tv/bliss_83"
+                href="https://www.mixer.com/BlissSG"
               >
                 <IconButton
-                  variantColor="messenger"
-                  color="white"
                   aria-label="Twitch"
-                  icon={FaTwitch}
+                  color="white"
                   cursor="pointer"
+                  icon="mixer"
+                  variantColor="messenger"
                 >
                   Twitch
                 </IconButton>
@@ -202,12 +204,12 @@ const IndexPage = (props): any => {
           </AnimatePresence>
         </Box>
         <Box
-          d={{ base: "none", md: "block" }}
+          // d={{ base: "none", md: "block" }}
           position="relative"
+          marginTop={{ base: "4", md: "0" }}
           w={{ base: "100%", lg: "50%" }}
           h={{ base: "100%" }}
-          overflowY="hidden"
-          zIndex="docked"
+          zIndex={customTheme.zIndices.docked}
         >
           <MetatronsCube delay={3250} />
         </Box>
