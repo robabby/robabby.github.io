@@ -103,6 +103,6 @@
     "react-icons": "^3.8.0",
     "react-particles-js": "^2.7.0",
     "react-three-fiber": "^3.0.17",
-    "three": "^0.112.1"
+    "three": "^0.125.0"
   }
 }
