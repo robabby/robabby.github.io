@@ -1,18 +1,18 @@
 /* eslint-disable @typescript-eslint/camelcase */
 import * as React from "react"
 import { AnimatePresence, motion } from "framer-motion"
-import { Box, Heading, IconButton, Text } from "@chakra-ui/core"
+import { Box, Heading, IconButton, Text } from "@chakra-ui/react"
 import { FaLinkedin, FaTwitter } from "react-icons/fa"
 import { GoMarkGithub } from "react-icons/go"
 import MetatronsCube from "../components/MetatronsCube"
-import Particles from "react-particles-js"
+// import Particles from "react-particles-js"
 import customTheme from "../components/Layout/theme"
-import styles from "./index.module.scss"
+// import styles from "./index.module.scss"
 
 const IndexPage = (): any => {
   return (
     <Box d="flex" position="relative" w="100%" h="100%">
-      <Particles
+      {/* <Particles
         className={styles.skyWrapper}
         canvasClassName={styles.skyCanvas}
         params={{
@@ -55,7 +55,7 @@ const IndexPage = (): any => {
           },
           retina_detect: true
         }}
-      />
+      /> */}
       <Box
         d="flex"
         flexDirection={{ base: "column-reverse", lg: "row" }}

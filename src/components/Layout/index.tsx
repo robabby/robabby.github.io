@@ -1,7 +1,6 @@
 import "./styles.scss"
 import * as React from "react"
-import { Box, Stack, Text, ThemeProvider } from "@chakra-ui/core"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { Box, Stack, Text, ThemeProvider } from "@chakra-ui/react"
 import { Helmet } from "react-helmet"
 import customTheme from "./theme"
 
@@ -13,7 +12,7 @@ export interface LayoutProps {
 }
 
 const Layout = (props: any): any => {
-  const COVER_BACKGROUND = customTheme.colors.gray["900"]
+  // const COVER_BACKGROUND = customTheme.colors.gray["900"]
 
   console.log(customTheme)
 
@@ -51,11 +50,9 @@ const Layout = (props: any): any => {
           zIndex={customTheme.zIndices.toast}
         >
           <Box>
-            <AniLink cover bg={COVER_BACKGROUND} direction="right" to="/">
-              <Text fontSize="xl" fontWeight="bold" color="teal.100">
-                Rob Abby
-              </Text>
-            </AniLink>
+            <Text fontSize="xl" fontWeight="bold" color="teal.100">
+              Rob Abby
+            </Text>
           </Box>
           <Stack color="white" isInline spacing="4">
             {/* <Box>

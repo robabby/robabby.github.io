@@ -5,7 +5,7 @@ import {
   Heading,
   Image
   // Tag
-} from "@chakra-ui/core"
+} from "@chakra-ui/react"
 import { LayoutProps, withLayout } from "../../components/Layout"
 import {
   // ImageSharp,

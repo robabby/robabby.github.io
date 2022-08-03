@@ -1,5 +1,5 @@
 import React from "react"
-import { theme } from "@chakra-ui/core"
+import { theme } from "@chakra-ui/react"
 
 // Step 1: Each icon should be stored as an object of `path` and `viewBox`
 const customIcons = {
@@ -18,16 +18,16 @@ const customIcons = {
         />
       </g>
     ),
-    viewBox: "0 0 512 512"
-  }
+    viewBox: "0 0 512 512",
+  },
 }
 
 const customTheme = {
   ...theme,
   icons: {
     ...theme.icons,
-    ...customIcons
-  }
+    ...customIcons,
+  },
 }
 
 export default customTheme

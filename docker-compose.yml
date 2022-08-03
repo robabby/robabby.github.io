@@ -1,8 +1,5 @@
 version: "2"
 
-volumes:
-  node_modules:
-
 services:
   robabby:
     container_name: robabby
@@ -16,8 +13,11 @@ services:
       - ./:/home/node/app
       # mount empty node_modules exclude the node_modules on host system from mounting into the container
       - node_modules:/home/node/app/node_modules
-      - .cache:/home/node/app/.cache
+      # - .cache:/home/node/app/.cache
       - public:/home/node/app/public
     ports:
       - "8000:8000"
     command: "yarn devDocker"
+volumes:
+  node_modules:
+  public:

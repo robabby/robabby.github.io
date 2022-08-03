@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
-import { Box } from "@chakra-ui/core"
+import { Box } from "@chakra-ui/react"
 // import { ImageSharp } from "../graphql-types"
 // import { get } from "lodash"
 import { withLayout } from "../components/Layout/index"

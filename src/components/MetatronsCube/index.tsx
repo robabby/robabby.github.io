@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/camelcase */
 import * as React from "react"
 import { AnimatePresence, motion, useAnimation } from "framer-motion"
-import { Box } from "@chakra-ui/core"
+import { Box } from "@chakra-ui/react"
 // import Cube from "./Cube"
-import Particles from "react-particles-js"
+// import Particles from "react-particles-js"
 import styles from "./styles.module.scss"
-import svg from "../../assets/images/cube.svg"
+// import svg from "../../assets/images/cube.svg"
 import windowDimensions from "../../hooks/windowDimensions"
 
 const { useState, useEffect } = React
@@ -23,7 +23,7 @@ const CIRCLES = [
   "M 262.5 335.5 A 47 47 0 1 1  168.5,335.5 A 47 47 0 1 1  262.5 335.5 z",
   "M 180.5 288.5 A 47 47 0 1 1  86.5,288.5 A 47 47 0 1 1  180.5 288.5 z",
   "M 180.5 194.5 A 47 47 0 1 1  86.5,194.5 A 47 47 0 1 1  180.5 194.5 z",
-  "M 262.5 241.5 A 47 47 0 1 1  168.5,241.5 A 47 47 0 1 1  262.5 241.5 z"
+  "M 262.5 241.5 A 47 47 0 1 1  168.5,241.5 A 47 47 0 1 1  262.5 241.5 z",
 ]
 const OUTER_LINES = [
   "M 215.5,53.5 L 379.5,147.5 L 379.5,335.5 L 215.5,429.5 L 51.5,335.5 L 51.5,147.5 L 215.5,53.5 z", // Outer Hexagon
@@ -38,14 +38,14 @@ const OUTER_LINES = [
   "M 51.5,335.5 L 215.5,147.5 L 297.5,288.5 L 51.5,335.5 z ",
   "M 379.5,335.5 L 215.5,147.5 L 133.5,288.5 L 379.5,335.5 z ",
   "M 379.5,147.5 L 133.5,194.5 L 215.5,335.5 L 379.5,147.5 z ",
-  "M 51.5,147.5 L 215.5,335.5 L 297.5,194.5 L 51.5,147.5 z "
+  "M 51.5,147.5 L 215.5,335.5 L 297.5,194.5 L 51.5,147.5 z ",
 ]
 const DASH_ARRAY = 2000
 const ANIMATED_DASH_OFFSET = 2000
 const COLORS = {
   pink: "rgba(244, 181, 248, .5)",
   blue1: "rgba(144, 205, 244, .5)",
-  blue2: "rgba(144, 205, 244, .25)"
+  blue2: "rgba(144, 205, 244, .25)",
 }
 
 const MetatronsCube = ({ delay = 0 }: any): any => {
@@ -66,8 +66,8 @@ const MetatronsCube = ({ delay = 0 }: any): any => {
         ease: "anticipate",
         duration: 4,
         loop: Infinity,
-        repeatDelay: 4
-      }
+        repeatDelay: 4,
+      },
     })
   }
 
@@ -81,8 +81,8 @@ const MetatronsCube = ({ delay = 0 }: any): any => {
         ease: "anticipate",
         duration: 4,
         loop: Infinity,
-        repeatDelay: 4
-      }
+        repeatDelay: 4,
+      },
     })
   }
 
@@ -91,8 +91,8 @@ const MetatronsCube = ({ delay = 0 }: any): any => {
       strokeDashoffset: 0,
       transition: {
         ease: "easeInOut",
-        duration: 2
-      }
+        duration: 2,
+      },
     })
 
     setTimeout(() => {
@@ -102,13 +102,13 @@ const MetatronsCube = ({ delay = 0 }: any): any => {
   }
 
   const circleSequence = async () => {
-    await lineControls.start(i => ({
+    await lineControls.start((i) => ({
       opacity: 1,
       transition: {
         ease: "easeInOut",
         duration: 0.7,
-        delay: i * 0.1
-      }
+        delay: i * 0.1,
+      },
     }))
 
     lineSequence()
@@ -118,7 +118,7 @@ const MetatronsCube = ({ delay = 0 }: any): any => {
     hover: { strokeWidth: 1.25 },
     pressed: { strokeWidth: 1.5 },
     checked: { stroke: "url(#linearGradient)" },
-    unchecked: { strokeWidth: 1 }
+    unchecked: { strokeWidth: 1 },
   }
 
   // const lineGroupVariants = {
@@ -152,7 +152,7 @@ const MetatronsCube = ({ delay = 0 }: any): any => {
       transition={{ duration: 1.25, ease: "easeInOut" }}
     >
       <Box d={{ base: "block", lg: "block" }}>
-        <Particles
+        {/* <Particles
           className={styles.particles}
           canvasClassName={styles.canvas}
           params={{
@@ -160,10 +160,6 @@ const MetatronsCube = ({ delay = 0 }: any): any => {
               enable: true,
               scale: isMdAndUp ? 1.5 : 1.3,
               type: "inline",
-              // move: {
-              //   radius: 2,
-              //   type: "path"
-              // },
               url: svg,
               inline: {
                 arrangement: "equidistant"
@@ -203,7 +199,7 @@ const MetatronsCube = ({ delay = 0 }: any): any => {
             },
             retina_detect: true
           }}
-        />
+        /> */}
       </Box>
       <motion.svg
         className={styles.metatron}
@@ -228,31 +224,31 @@ const MetatronsCube = ({ delay = 0 }: any): any => {
                   COLORS.pink,
                   COLORS.blue1,
                   COLORS.pink,
-                  COLORS.blue2
+                  COLORS.blue2,
                 ],
                 transitionEnd: {
-                  stopColor: COLORS.blue2
-                }
+                  stopColor: COLORS.blue2,
+                },
               }}
               offset="0%"
               stopColor={COLORS.pink}
               transition={{
                 ease: "easeInOut",
-                duration: 8
+                duration: 8,
               }}
             />
             <motion.stop
               animate={{
                 stopColor: [COLORS.blue1, COLORS.pink, COLORS.blue2],
                 transitionEnd: {
-                  stopColor: COLORS.blue2
-                }
+                  stopColor: COLORS.blue2,
+                },
               }}
               offset="100%"
               stopColor={COLORS.blue2}
               transition={{
                 ease: "easeInOut",
-                duration: 8
+                duration: 8,
               }}
             />
           </motion.linearGradient>
@@ -270,7 +266,7 @@ const MetatronsCube = ({ delay = 0 }: any): any => {
                 strokeWidth: 1,
                 strokeDasharray: DASH_ARRAY,
                 strokeDashoffset: 0,
-                strokeLinecap: "round"
+                strokeLinecap: "round",
               }}
               stroke={"url(#linearGradient)"}
               variants={circleVariants}
@@ -278,7 +274,7 @@ const MetatronsCube = ({ delay = 0 }: any): any => {
           ))}
         </motion.g>
         <motion.g initial={{ rotate: 0 }} animate={rotateLinesControls}>
-          {OUTER_LINES.map(def => (
+          {OUTER_LINES.map((def) => (
             <motion.path
               key={def}
               d={def}
@@ -289,7 +285,7 @@ const MetatronsCube = ({ delay = 0 }: any): any => {
                 strokeDasharray: DASH_ARRAY,
                 strokeDashoffset: ANIMATED_DASH_OFFSET,
                 strokeLinecap: "round",
-                strokeWidth: 1
+                strokeWidth: 1,
               }}
               stroke={"url(#linearGradient)"}
             />

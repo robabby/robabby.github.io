@@ -14,41 +14,30 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-json',
     {
-      resolve: 'gatsby-plugin-transition-link',
-      options: {
-          layout: require.resolve(`./src/components/Layout/index.tsx`)
-        }
-    },
-    {
       resolve: 'gatsby-plugin-sass',
       options: {
-        data: ['@import "main.scss";'],
-        includePaths: ['src/styles'],
+        additionalData: '@import "main.scss";',
+        sassOptions: {
+          includePaths: ['src/styles'],
+        },
         postCssPlugins: [
           require('autoprefixer')({
             grid: true,
           }),
-        ],
-        importer: globImporter(),
+        ]
       },
     },
     {
-      resolve: "gatsby-plugin-chakra-ui",
+      resolve: "@chakra-ui/gatsby-plugin",
       options: {
         /**
-         * @property {boolean} [isResettingCSS=true]
+         * @property {boolean} [resetCSS=true]
          * if false, this plugin will not use `<CSSReset />
          *
-         * isResettingCSS: true
-         *
-         * @property {boolean} [isUsingColorMode=true]
-         * if false, this plugin will not use <ColorModeProvider />
-         *
-         * isUsingColorMode: true
+         * resetCSS: true
          *
          */
-        isResettingCSS: true,
-        isUsingColorMode: false
+        resetCSS: true
       },
     },
     {
